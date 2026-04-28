@@ -17,7 +17,7 @@ const dailyShows = [
     host: 'Kartelo & Miracle Baby',
     schedule: 'Weekdays | 5:00 AM - 12:00 PM',
     description: 'Sheng, bangers, and pure chaos. Start your morning correct.',
-    image: '/KarteloandMiracleBaby.jpg',
+    image: '/VidsHero.png',
   },
   {
     title: 'Lunch Rieng',
