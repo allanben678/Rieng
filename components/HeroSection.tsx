@@ -35,11 +35,6 @@ export default function HeroSection() {
               Explore RIENGFLIX
             </Link>
           </div>
-          <div className="flex justify-center mt-6">
-            <Link href="/albums" className="text-primary hover:text-white transition-colors font-semibold">
-              Browse Catalog →
-            </Link>
-          </div>
         </div>
       </div>
     </section>

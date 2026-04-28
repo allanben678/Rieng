@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function BuySongPromo() {
   return (
     <section className="bg-gradient-to-r from-primary to-orange-600 py-16 md:py-20">
@@ -24,9 +26,9 @@ export default function BuySongPromo() {
                 <span className="text-white">Support independent artists</span>
               </div>
             </div>
-            <button className="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors text-lg">
+            <Link href="/albums" className="inline-block bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors text-lg">
               Browse Catalog
-            </button>
+            </Link>
           </div>
           <div className="bg-white/10 rounded-xl aspect-square flex items-center justify-center text-8xl">
             🎵
