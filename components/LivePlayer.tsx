@@ -8,7 +8,7 @@ export default function LivePlayer() {
   const [tick, setTick] = useState(0)
   const audioRef = useRef<HTMLAudioElement>(null)
 
-  const [currentShow, setCurrentShow] = useState({ title: 'The Morning', host: 'Kartelo & Miracle Baby', image: '/KarteloandMiracleBaby.jpg' })
+  const [currentShow, setCurrentShow] = useState({ title: 'The Morning', host: 'Kartelo', image: '/KarteloandMiracleBaby.jpg' })
   const [mounted, setMounted] = useState(false)
 
   // Determine current show based on time of day
@@ -94,7 +94,7 @@ export default function LivePlayer() {
               </h2>
               
               <p className="text-xl md:text-2xl text-gray-400 mb-8 font-medium">
-                Hosted by <span className="text-white font-bold">{mounted ? currentShow.host : 'Kartelo & Miracle Baby'}</span>
+                Hosted by <span className="text-white font-bold">{mounted ? currentShow.host : 'Kartelo'}</span>
               </p>
               
               {/* Custom Player Controls */}
