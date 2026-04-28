@@ -171,9 +171,9 @@ export default function ShowsPage() {
             <div className="max-w-2xl">
                <h2 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tighter mb-6 leading-none">Weekend <br/><span className="text-black italic">Takeovers.</span></h2>
                <p className="text-black font-black uppercase tracking-widest md:text-xl mb-10 border-l-4 border-black pl-5">Every weekend we hand the keys to the studio over to Kenya's hardest underground DJs for unfiltered, 4-hour live sets.</p>
-               <button className="bg-black hover:bg-white text-white hover:text-black font-black uppercase tracking-widest px-10 py-5 rounded-full transition-all duration-300 shadow-2xl hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] flex items-center gap-4">
+               <a href="mailto:shows@riengradio.co.ke" className="inline-block bg-black hover:bg-white text-white hover:text-black font-black uppercase tracking-widest px-10 py-5 rounded-full transition-all duration-300 shadow-2xl hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] flex items-center gap-4 w-max">
                  Apply for a Guest Mix <span className="text-2xl">→</span>
-               </button>
+               </a>
             </div>
          </div>
       </section>
