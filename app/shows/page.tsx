@@ -35,7 +35,7 @@ const dailyShows = [
   },
   {
     title: 'SPORTS SHOW',
-    host: 'Bura Ownio',
+    host: 'Bura & Swat',
     schedule: 'Saturday | 8:00 AM - 12:00 PM',
     description: 'The ultimate sports breakdown. Hot takes, live analysis, and all the weekend action from local and international sports.',
     image: '/Bura.jpg',
@@ -44,7 +44,7 @@ const dailyShows = [
   },
   {
     title: 'POLITICS SHOW',
-    host: 'Telo & Bura',
+    host: 'Boneye',
     schedule: 'Thursdays & Sundays | 7:00 PM - 10:00 PM',
     description: 'In-depth political interviews with leading politicians and presidential aspirants. No questions off-limits.',
     image: '/TeloandBura.jpg',
