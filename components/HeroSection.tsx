@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function HeroSection() {
   return (
@@ -27,12 +28,17 @@ export default function HeroSection() {
             The pulse of Kenyan youth culture. Sheng, comedy, podcasts, and the sickest live mixes. 
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-primary text-white px-8 py-4 rounded-full font-bold hover:bg-orange-600 transition-all text-lg shadow-lg shadow-primary/20 hover:-translate-y-1">
+            <Link href="#live-player" className="bg-primary text-white px-8 py-4 rounded-full font-bold hover:bg-orange-600 transition-all text-lg shadow-lg shadow-primary/20 hover:-translate-y-1">
               Tune In Live
-            </button>
-            <button className="bg-black/50 backdrop-blur-md border-2 border-primary text-white px-8 py-4 rounded-full font-bold hover:bg-primary/20 transition-all text-lg hover:-translate-y-1">
+            </Link>
+            <Link href="/shows" className="bg-black/50 backdrop-blur-md border-2 border-primary text-white px-8 py-4 rounded-full font-bold hover:bg-primary/20 transition-all text-lg hover:-translate-y-1">
               Explore RIENGFLIX
-            </button>
+            </Link>
+          </div>
+          <div className="flex justify-center mt-6">
+            <Link href="/albums" className="text-primary hover:text-white transition-colors font-semibold">
+              Browse Catalog →
+            </Link>
           </div>
         </div>
       </div>
