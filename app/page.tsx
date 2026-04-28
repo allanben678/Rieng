@@ -14,21 +14,21 @@ import PartnersSlider from '@/components/PartnersSlider'
 const dailyShows = [
   {
     title: 'The Morning Rieng',
-    host: 'Kartelo & Miracle Baby',
+    host: 'Kartelo',
     schedule: 'Weekdays | 5:00 AM - 12:00 PM',
     description: 'Sheng, bangers, and pure chaos. Start your morning correct.',
     image: '/VidsHero.png',
   },
   {
     title: 'Lunch Rieng',
-    host: 'Kartelo & Miracle Baby',
+    host: 'Kartelo',
     schedule: 'Weekdays | 12:00 PM - 5:00 PM',
     description: 'Take a break with the sickest podcast vibes and trending music.',
     image: '/Studio.jpg',
   },
   {
     title: 'The Evening Rieng',
-    host: 'Kartelo & Miracle Baby',
+    host: 'Kartelo',
     schedule: 'Mon-Sun | 5:00 PM - Late',
     description: 'Unwind with our curated selection of Kenyan hits and live mixes.',
     image: '/Group.jpg',
