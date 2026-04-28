@@ -34,7 +34,7 @@ const dailyShows = [
     features: ['Exclusive Dubplates', 'Reggae & Dancehall', 'Club Mixes']
   },
   {
-    title: 'Bura Ownio Show',
+    title: 'SPORTS SHOW',
     host: 'Bura Ownio',
     schedule: 'Saturday | 8:00 AM - 12:00 PM',
     description: 'The ultimate sports breakdown. Hot takes, live analysis, and all the weekend action from local and international sports.',
@@ -43,7 +43,7 @@ const dailyShows = [
     features: ['Live Sports Analysis', 'Athlete Interviews', 'Fantasy Football Talk']
   },
   {
-    title: 'By Telo and Bura',
+    title: 'POLITICS SHOW',
     host: 'Telo & Bura',
     schedule: 'Thursdays & Sundays | 7:00 PM - 10:00 PM',
     description: 'In-depth political interviews with leading politicians and presidential aspirants. No questions off-limits.',
