@@ -8,7 +8,7 @@ import Image from 'next/image'
 const dailyShows = [
   {
     title: 'The Morning Rieng',
-    host: 'Kartelo & Miracle Baby',
+    host: 'Kartelo',
     schedule: 'Weekdays | 5:00 AM - 12:00 PM',
     description: 'Sheng, bangers, and pure chaos. Start your morning correct.',
     image: '/Shows1.jpg',
@@ -17,7 +17,7 @@ const dailyShows = [
   },
   {
     title: 'Lunch Rieng',
-    host: 'Kartelo & Miracle Baby',
+    host: 'Kartelo',
     schedule: 'Weekdays | 12:00 PM - 5:00 PM',
     description: 'Take a break with the sickest podcast vibes and trending music.',
     image: '/Studio.jpg',
@@ -26,12 +26,30 @@ const dailyShows = [
   },
   {
     title: 'The Evening Rieng',
-    host: 'Kartelo & Miracle Baby',
+    host: 'Kartelo',
     schedule: 'Mon-Sun | 5:00 PM - Late',
     description: 'Unwind with our curated selection of Kenyan hits and live mixes.',
     image: '/Group.jpg',
     color: 'from-purple-500/20 to-transparent',
     features: ['Exclusive Dubplates', 'Reggae & Dancehall', 'Club Mixes']
+  },
+  {
+    title: 'Bura Ownio Show',
+    host: 'Bura Ownio',
+    schedule: 'Saturday | 8:00 AM - 12:00 PM',
+    description: 'The ultimate sports breakdown. Hot takes, live analysis, and all the weekend action from local and international sports.',
+    image: '/Shows1.jpg',
+    color: 'from-green-500/20 to-transparent',
+    features: ['Live Sports Analysis', 'Athlete Interviews', 'Fantasy Football Talk']
+  },
+  {
+    title: 'By Telo and Bura',
+    host: 'Telo & Bura',
+    schedule: 'Thursdays & Sundays | 7:00 PM - 10:00 PM',
+    description: 'In-depth political interviews with leading politicians and presidential aspirants. No questions off-limits.',
+    image: '/Group.jpg',
+    color: 'from-blue-500/20 to-transparent',
+    features: ['Political Interviews', 'Policy Discussions', 'Election Coverage']
   },
 ]
 
