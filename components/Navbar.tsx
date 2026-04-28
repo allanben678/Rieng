@@ -65,9 +65,9 @@ export default function Navbar() {
 
           {/* Desktop Button & Mobile Menu Toggle */}
           <div className="flex items-center gap-4">
-            <button className="hidden sm:inline-block bg-primary text-white px-4 sm:px-6 py-2 rounded-lg font-semibold hover:bg-orange-600 transition-colors text-sm sm:text-base">
+            <Link href="#live-player" className="hidden sm:inline-block bg-primary text-white px-4 sm:px-6 py-2 rounded-lg font-semibold hover:bg-orange-600 transition-colors text-sm sm:text-base">
               Listen Now
-            </button>
+            </Link>
             
             {/* Mobile Menu Button */}
             <button
@@ -98,9 +98,9 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <button className="w-full bg-primary text-white px-4 py-2 rounded-lg font-semibold hover:bg-orange-600 transition-colors">
+              <Link href="#live-player" onClick={() => setIsOpen(false)} className="w-full block text-center bg-primary text-white px-4 py-2 rounded-lg font-semibold hover:bg-orange-600 transition-colors">
                 Listen Now
-              </button>
+              </Link>
             </div>
           </div>
         )}

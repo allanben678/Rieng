@@ -2,8 +2,38 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 
 export default function Footer() {
+  const [email, setEmail] = useState('')
+  const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState('')
+
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return emailRegex.test(email)
+  }
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault()
+    setError('')
+
+    if (!email.trim()) {
+      setError('Please enter an email')
+      return
+    }
+
+    if (!validateEmail(email)) {
+      setError('Please enter a valid email address')
+      return
+    }
+
+    // Submit animation
+    setSubmitted(true)
+    setEmail('')
+    setTimeout(() => setSubmitted(false), 3000)
+  }
+
   return (
     <footer className="relative bg-[#050505] border-t border-white/10 overflow-hidden">
       {/* Background Banner Image with Dark Gradient Overlay */}
@@ -40,15 +70,28 @@ export default function Footer() {
             
             <div>
                <h4 className="text-white font-bold uppercase tracking-widest text-xs mb-4">Join The Movement</h4>
-               <form className="flex items-center justify-between bg-white/5 border border-white/10 rounded-full p-2 max-w-sm" onSubmit={(e) => e.preventDefault()}>
-                  <input 
-                    type="email" 
-                    placeholder="Enter your email..." 
-                    className="flex-1 bg-transparent px-4 text-sm text-white focus:outline-none placeholder:text-gray-600"
-                  />
-                  <button type="submit" className="bg-primary hover:bg-orange-600 text-white px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest transition-all shadow-[0_0_15px_rgba(255,107,53,0.3)]">
-                    Subscribe
-                  </button>
+               <form className="flex flex-col gap-2 max-w-sm" onSubmit={handleSubscribe}>
+                  <div className="flex items-center justify-between bg-white/5 border border-white/10 rounded-full p-2">
+                    <input 
+                      type="email" 
+                      placeholder="Enter your email..." 
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="flex-1 bg-transparent px-4 text-sm text-white focus:outline-none placeholder:text-gray-600"
+                    />
+                    <button 
+                      type="submit" 
+                      disabled={submitted}
+                      className={`text-white px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest transition-all ${
+                        submitted 
+                          ? 'bg-green-600 shadow-[0_0_15px_rgba(34,197,94,0.3)]' 
+                          : 'bg-primary hover:bg-orange-600 shadow-[0_0_15px_rgba(255,107,53,0.3)]'
+                      }`}
+                    >
+                      {submitted ? '✓ Subscribed' : 'Subscribe'}
+                    </button>
+                  </div>
+                  {error && <p className="text-red-500 text-xs font-medium">{error}</p>}
                </form>
             </div>
           </div>
@@ -70,7 +113,7 @@ export default function Footer() {
             <h3 className="text-white font-black uppercase tracking-widest text-sm mb-6">Legal & Info</h3>
             <ul className="space-y-4">
               <li><Link href="#" className="text-gray-400 hover:text-white hover:translate-x-1 block transition-transform font-medium text-sm w-max">About Us</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white hover:translate-x-1 block transition-transform font-medium text-sm w-max">Contact Studio</Link></li>
+              <li><a href="tel:+254799649400" className="text-gray-400 hover:text-white hover:translate-x-1 block transition-transform font-medium text-sm w-max">Contact Studio</a></li>
               <li><Link href="#" className="text-gray-400 hover:text-white hover:translate-x-1 block transition-transform font-medium text-sm w-max">Privacy Policy</Link></li>
               <li><Link href="#" className="text-gray-400 hover:text-white hover:translate-x-1 block transition-transform font-medium text-sm w-max">Terms of Service</Link></li>
               <li><Link href="#" className="text-gray-400 hover:text-white hover:translate-x-1 block transition-transform font-medium text-sm w-max">Cookie Policy</Link></li>
