@@ -71,10 +71,11 @@ export default function PaymentModal({ isOpen, onClose, song }: PaymentModalProp
 
   const triggerDownload = (url: string, fileName: string) => {
     setDownloading(true)
+    // Use the API endpoint to force download instead of playing
+    const downloadUrl = `/api/download?url=${encodeURIComponent(url)}&name=${encodeURIComponent(fileName)}`
     const a = document.createElement('a')
-    a.href = url
+    a.href = downloadUrl
     a.download = fileName
-    a.target = '_blank'
     document.body.appendChild(a)
     a.click()
     document.body.removeChild(a)
