@@ -17,11 +17,11 @@ export default function LivePlayer() {
     const hour = new Date().getHours() // 0-23
     
     if (hour >= 5 && hour < 12) {
-      setCurrentShow({ title: 'The Morning', host: 'Kartelo & Miracle Baby', image: '/KarteloandMiracleBaby.jpg' })
+      setCurrentShow({ title: 'The Morning', host: 'Kartelo', image: '/KarteloandMiracleBaby.jpg' })
     } else if (hour >= 12 && hour < 18) {
-      setCurrentShow({ title: 'The Lunch', host: 'Kartelo & Miracle Baby', image: '/Studio.jpg' })
+      setCurrentShow({ title: 'The Lunch', host: 'Kartelo', image: '/Studio.jpg' })
     } else {
-      setCurrentShow({ title: 'The Evening', host: 'Kartelo & Miracle Baby', image: '/Group.jpg' })
+      setCurrentShow({ title: 'The Evening', host: 'Kartelo', image: '/Group.jpg' })
     }
   }, [])
 
