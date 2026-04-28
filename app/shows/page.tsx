@@ -38,7 +38,7 @@ const dailyShows = [
     host: 'Bura Ownio',
     schedule: 'Saturday | 8:00 AM - 12:00 PM',
     description: 'The ultimate sports breakdown. Hot takes, live analysis, and all the weekend action from local and international sports.',
-    image: '/Shows1.jpg',
+    image: '/Bura.jpg',
     color: 'from-green-500/20 to-transparent',
     features: ['Live Sports Analysis', 'Athlete Interviews', 'Fantasy Football Talk']
   },
@@ -47,7 +47,7 @@ const dailyShows = [
     host: 'Telo & Bura',
     schedule: 'Thursdays & Sundays | 7:00 PM - 10:00 PM',
     description: 'In-depth political interviews with leading politicians and presidential aspirants. No questions off-limits.',
-    image: '/Group.jpg',
+    image: '/TeloandBura.jpg',
     color: 'from-blue-500/20 to-transparent',
     features: ['Political Interviews', 'Policy Discussions', 'Election Coverage']
   },
