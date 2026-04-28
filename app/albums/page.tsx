@@ -20,7 +20,7 @@ const songsForSale = [
     tag: 'Hot 🔥',
     bpm: '138 BPM',
     duration: '3:42',
-    downloadUrl: 'http://47.237.15.69/Rieng.mp3',
+    downloadUrl: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/Rieng.mp3?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvUmllbmcubXAzIiwiaWF0IjoxNzc3MzY0NjAwLCJleHAiOjE4MDg5MDA2MDB9.Rz943gAjETn2D7jYgCgdQhIwNaBEunAuS_3UAe-A9aI',
     fileName: 'Rieng-Remix.mp3'
   },
   {
@@ -35,7 +35,7 @@ const songsForSale = [
     tag: 'Viral 📈',
     bpm: '112 BPM',
     duration: '2:58',
-    downloadUrl: 'http://47.237.15.69/ChupaKuChupa.mp3',
+    downloadUrl: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/ChupaKuChupa.mp3?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvQ2h1cGFLdUNodXBhLm1wMyIsImlhdCI6MTc3NzM2NDU3NCwiZXhwIjoxODA4OTAwNTc0fQ.D45gKgDVrVHaS9ubFNZKXgiip493462euMsjszUSGPI',
     fileName: 'Chupa-Ku-Chupa.mp3'
   }
 ]
