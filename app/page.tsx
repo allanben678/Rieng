@@ -13,24 +13,24 @@ import PartnersSlider from '@/components/PartnersSlider'
 
 const dailyShows = [
   {
-    title: 'The Morning Rieng',
-    host: 'Kartelo',
-    schedule: 'Weekdays | 5:00 AM - 12:00 PM',
-    description: 'Sheng, bangers, and pure chaos. Start your morning correct.',
-    image: '/VidsHero.png',
+    title: 'Kenyan Old School',
+    host: 'RIENG Radio',
+    schedule: 'Daily | 5:00 AM - 10:00 AM',
+    description: 'Journey through the greatest hits from 2000s to 2004/5 Kenyan music. Featuring e Sir, Mr. Lenny, Kleptomaniax, and Dux Vultures.',
+    image: '/Shows1.jpg',
   },
   {
-    title: 'Lunch Rieng',
-    host: 'Kartelo',
-    schedule: 'Weekdays | 12:00 PM - 5:00 PM',
-    description: 'Take a break with the sickest podcast vibes and trending music.',
+    title: 'Gengetone / Arbantone',
+    host: 'RIENG Radio',
+    schedule: 'Daily | 10:00 AM - 3:00 PM',
+    description: 'The hardest beats and hottest flows from the Gengetone and Arbantone scenes. Pure energy from Kenya&apos;s underground.',
     image: '/Studio.jpg',
   },
   {
-    title: 'The Evening Rieng',
-    host: 'Kartelo',
-    schedule: 'Mon-Sun | 5:00 PM - Late',
-    description: 'Unwind with our curated selection of Kenyan hits and live mixes.',
+    title: 'Reggae / Dancehall',
+    host: 'RIENG Radio',
+    schedule: 'Daily | 3:00 PM - 7:00 PM',
+    description: 'Unwind with smooth reggae vibes and infectious dancehall rhythms. Island sounds dominate the airwaves.',
     image: '/Group.jpg',
   },
 ]
