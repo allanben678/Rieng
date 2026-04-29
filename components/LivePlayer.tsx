@@ -8,7 +8,7 @@ export default function LivePlayer() {
   const [tick, setTick] = useState(0)
   const audioRef = useRef<HTMLAudioElement>(null)
 
-  const [currentShow, setCurrentShow] = useState({ title: 'The Morning', host: 'Kartelo', image: '/KarteloandMiracleBaby.jpg' })
+  const [currentShow, setCurrentShow] = useState({ title: 'Kenyan Old School', host: 'RIENG Radio', image: '/Shows1.jpg' })
   const [mounted, setMounted] = useState(false)
 
   // Determine current show based on time of day
@@ -16,12 +16,18 @@ export default function LivePlayer() {
     setMounted(true)
     const hour = new Date().getHours() // 0-23
     
-    if (hour >= 5 && hour < 12) {
-      setCurrentShow({ title: 'The Morning', host: 'Kartelo', image: '/KarteloandMiracleBaby.jpg' })
-    } else if (hour >= 12 && hour < 18) {
-      setCurrentShow({ title: 'The Lunch', host: 'Kartelo', image: '/Studio.jpg' })
+    if (hour >= 5 && hour < 10) {
+      setCurrentShow({ title: 'Kenyan Old School', host: 'RIENG Radio', image: '/Shows1.jpg' })
+    } else if (hour >= 10 && hour < 15) {
+      setCurrentShow({ title: 'Gengetone / Arbantone', host: 'RIENG Radio', image: '/Studio.jpg' })
+    } else if (hour >= 15 && hour < 19) {
+      setCurrentShow({ title: 'Reggae / Dancehall', host: 'RIENG Radio', image: '/Group.jpg' })
+    } else if (hour >= 19 && hour < 23) {
+      setCurrentShow({ title: 'Underground Kenyan HipHop', host: 'RIENG Radio', image: '/Bura.jpg' })
+    } else if (hour >= 23 || hour < 3) {
+      setCurrentShow({ title: 'Kenyan RnB', host: 'RIENG Radio', image: '/TeloandBura.jpg' })
     } else {
-      setCurrentShow({ title: 'The Evening', host: 'Kartelo', image: '/Group.jpg' })
+      setCurrentShow({ title: 'Gospel Kenya', host: 'RIENG Radio', image: '/Shows1.jpg' })
     }
   }, [])
 
@@ -90,7 +96,7 @@ export default function LivePlayer() {
               </div>
               
               <h2 className="text-4xl md:text-6xl font-black text-white mb-4 tracking-tight uppercase drop-shadow-lg">
-                {mounted ? currentShow.title : 'The Morning'} <span className="text-primary italic">Rieng</span>
+                {mounted ? currentShow.title : 'Kenyan Old School'}
               </h2>
               
               <p className="text-xl md:text-2xl text-gray-400 mb-8 font-medium">
