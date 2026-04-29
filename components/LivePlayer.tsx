@@ -100,7 +100,7 @@ export default function LivePlayer() {
               </h2>
               
               <p className="text-xl md:text-2xl text-gray-400 mb-8 font-medium">
-                Hosted by <span className="text-white font-bold">{mounted ? currentShow.host : 'Kartelo'}</span>
+                <span className="text-white font-bold">{mounted ? currentShow.host : 'RIENG Radio'}</span> • Playing Now
               </p>
               
               {/* Custom Player Controls */}
