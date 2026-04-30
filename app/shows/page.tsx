@@ -54,7 +54,7 @@ const dailyShows = [
   {
     title: 'Gospel Kenya',
     host: 'RIENG Radio',
-    schedule: 'Sundays | 3:00 AM - 5:00 AM',
+    schedule: 'Sundays | All Day',
     description: 'Spiritual awakening with Kenya&apos;s finest gospel music. Start your day with uplifting messages and powerful melodies.',
     image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/KenyanGospel.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvS2VueWFuR29zcGVsLmpwZyIsImlhdCI6MTc3NzUwODk1OSwiZXhwIjoxODA5MDQ0OTU5fQ.wt15D0vtF_cJwX5C5Sl_VwkUENwswKyJoD-s0xE2dKM',
     color: 'from-yellow-500/20 to-transparent',
@@ -72,7 +72,7 @@ const dailyShows = [
   {
     title: 'POLITICS SHOW',
     host: 'Boneye',
-    schedule: 'Thursdays & Sundays | 7:00 PM - 10:00 PM',
+    schedule: 'Saturday | 3:00 PM - 7:00 PM',
     description: 'In-depth political interviews with leading politicians and presidential aspirants. No questions off-limits.',
     image: '/TeloandBura.jpg',
     color: 'from-blue-500/20 to-transparent',
@@ -131,9 +131,9 @@ export default function ShowsPage() {
             if (show.title === 'Reggae / Dancehall' && currentHour >= 15 && currentHour < 19) isLive = true;
             if (show.title === 'Underground Kenyan HipHop' && currentHour >= 19 && currentHour < 23) isLive = true;
             if (show.title === 'Kenyan RnB' && (currentHour >= 23 || currentHour < 3)) isLive = true;
-            if (show.title === 'Gospel Kenya' && currentDay === 0 && currentHour >= 3 && currentHour < 5) isLive = true;
-            if (show.title === 'SPORTS SHOW' && currentHour >= 8 && currentHour < 12) isLive = true;
-            if (show.title === 'POLITICS SHOW' && currentHour >= 19 && currentHour < 22) isLive = true;
+            if (show.title === 'Gospel Kenya' && currentDay === 0) isLive = true;
+            if (show.title === 'SPORTS SHOW' && currentDay === 6 && currentHour >= 8 && currentHour < 12) isLive = true;
+            if (show.title === 'POLITICS SHOW' && currentDay === 6 && currentHour >= 15 && currentHour < 19) isLive = true;
           }
 
           return (
