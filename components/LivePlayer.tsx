@@ -8,7 +8,7 @@ export default function LivePlayer() {
   const [tick, setTick] = useState(0)
   const audioRef = useRef<HTMLAudioElement>(null)
 
-  const [currentShow, setCurrentShow] = useState({ title: 'The Morning', host: 'Kartelo', image: '/KarteloandMiracleBaby.jpg' })
+  const [currentShow, setCurrentShow] = useState({ title: 'Kenyan Old School', host: 'RIENG Radio', image: '/Shows1.jpg' })
   const [mounted, setMounted] = useState(false)
 
   // Determine current show based on time of day
@@ -16,12 +16,18 @@ export default function LivePlayer() {
     setMounted(true)
     const hour = new Date().getHours() // 0-23
     
-    if (hour >= 5 && hour < 12) {
-      setCurrentShow({ title: 'The Morning', host: 'Kartelo', image: '/KarteloandMiracleBaby.jpg' })
-    } else if (hour >= 12 && hour < 18) {
-      setCurrentShow({ title: 'The Lunch', host: 'Kartelo', image: '/Studio.jpg' })
+    if (hour >= 5 && hour < 10) {
+      setCurrentShow({ title: 'Kenyan Old School', host: 'RIENG Radio', image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/KenyanOldSchool.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvS2VueWFuT2xkU2Nob29sLmpwZyIsImlhdCI6MTc3NzUwODgwMSwiZXhwIjoxODA5MDQ0ODAxfQ.5FR3q4quQCmHSW1WyQ-x0YjE0M04o2sQt2zs4u3_Fa0' })
+    } else if (hour >= 10 && hour < 15) {
+      setCurrentShow({ title: 'Gengetone / Arbantone', host: 'RIENG Radio', image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/Gengetone.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvR2VuZ2V0b25lLmpwZyIsImlhdCI6MTc3NzUwODgzNSwiZXhwIjoxODA5MDQ0ODM1fQ.edECFW-1vDOXHHpQ7emyRfNPyDjDnbOAD5sdKAHuUcI' })
+    } else if (hour >= 15 && hour < 19) {
+      setCurrentShow({ title: 'Reggae / Dancehall', host: 'RIENG Radio', image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/Raggae.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvUmFnZ2FlLmpwZyIsImlhdCI6MTc3NzUwODg2MywiZXhwIjoxODA5MDQ0ODYzfQ.SeGa4aX2eKNLyVjBQk-PmFDK-0ICQQDBv6dlbJe096I' })
+    } else if (hour >= 19 && hour < 23) {
+      setCurrentShow({ title: 'Underground Kenyan HipHop', host: 'RIENG Radio', image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/UnderGroundHipop.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvVW5kZXJHcm91bmRIaXBvcC5qcGciLCJpYXQiOjE3Nzc1MDg4ODUsImV4cCI6MTgwOTA0NDg4NX0.Y3ZEn6QhhL9irKCzWVVj6NYuGqpXxtHb1gW6h9NXGwA' })
+    } else if (hour >= 23 || hour < 3) {
+      setCurrentShow({ title: 'Kenyan RnB', host: 'RIENG Radio', image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/KenyanRnB.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvS2VueWFuUm5CLmpwZyIsImlhdCI6MTc3NzUwODkwOSwiZXhwIjoxODA5MDQ0OTA5fQ.5lYCZBD3OfhwpKVQgj2fAzb9B2bp8IgWgkDtjpANdOs' })
     } else {
-      setCurrentShow({ title: 'The Evening', host: 'Kartelo', image: '/Group.jpg' })
+      setCurrentShow({ title: 'Gospel Kenya', host: 'RIENG Radio', image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/KenyanGospel.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvS2VueWFuR29zcGVsLmpwZyIsImlhdCI6MTc3NzUwODk1OSwiZXhwIjoxODA5MDQ0OTU5fQ.wt15D0vtF_cJwX5C5Sl_VwkUENwswKyJoD-s0xE2dKM' })
     }
   }, [])
 
@@ -90,11 +96,11 @@ export default function LivePlayer() {
               </div>
               
               <h2 className="text-4xl md:text-6xl font-black text-white mb-4 tracking-tight uppercase drop-shadow-lg">
-                {mounted ? currentShow.title : 'The Morning'} <span className="text-primary italic">Rieng</span>
+                {mounted ? currentShow.title : 'Kenyan Old School'}
               </h2>
               
               <p className="text-xl md:text-2xl text-gray-400 mb-8 font-medium">
-                Hosted by <span className="text-white font-bold">{mounted ? currentShow.host : 'Kartelo'}</span>
+                <span className="text-white font-bold">{mounted ? currentShow.host : 'RIENG Radio'}</span> • Playing Now
               </p>
               
               {/* Custom Player Controls */}

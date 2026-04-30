@@ -7,31 +7,58 @@ import Image from 'next/image'
 
 const dailyShows = [
   {
-    title: 'The Morning Rieng',
-    host: 'Kartelo',
-    schedule: 'Weekdays | 5:00 AM - 12:00 PM',
-    description: 'Sheng, bangers, and pure chaos. Start your morning correct.',
-    image: '/Shows1.jpg',
+    title: 'Kenyan Old School',
+    host: 'RIENG Radio',
+    schedule: 'Daily | 5:00 AM - 10:00 AM',
+    description: 'Journey through the greatest hits from 2000s to 2004/5 Kenyan music. Featuring e Sir, Mr. Lenny, Kleptomaniax, and Dux Vultures.',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/KenyanOldSchool.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvS2VueWFuT2xkU2Nob29sLmpwZyIsImlhdCI6MTc3NzUwODgwMSwiZXhwIjoxODA5MDQ0ODAxfQ.5FR3q4quQCmHSW1WyQ-x0YjE0M04o2sQt2zs4u3_Fa0',
     color: 'from-orange-500/20 to-transparent',
-    features: ['Live Caller Debates', 'New Gengetone Drops', 'Morning News Wrap']
+    features: ['e Sir', 'Mr. Lenny', 'Kleptomaniax', 'Dux Vultures']
   },
   {
-    title: 'Lunch Rieng',
-    host: 'Kartelo',
-    schedule: 'Weekdays | 12:00 PM - 5:00 PM',
-    description: 'Take a break with the sickest podcast vibes and trending music.',
-    image: '/Studio.jpg',
+    title: 'Gengetone / Arbantone',
+    host: 'RIENG Radio',
+    schedule: 'Daily | 10:00 AM - 3:00 PM',
+    description: 'The hardest beats and hottest flows from the Gengetone and Arbantone scenes. Pure energy from Kenya&apos;s underground.',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/Gengetone.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvR2VuZ2V0b25lLmpwZyIsImlhdCI6MTc3NzUwODgzNSwiZXhwIjoxODA5MDQ0ODM1fQ.edECFW-1vDOXHHpQ7emyRfNPyDjDnbOAD5sdKAHuUcI',
     color: 'from-red-500/20 to-transparent',
-    features: ['Pop Culture Roast', 'Celebrity Guests', 'Viral TikTok Sounds']
+    features: ['Live Gengetone', 'New Drops', 'Beat Breakdowns']
   },
   {
-    title: 'The Evening Rieng',
-    host: 'Kartelo',
-    schedule: 'Mon-Sun | 5:00 PM - Late',
-    description: 'Unwind with our curated selection of Kenyan hits and live mixes.',
-    image: '/Group.jpg',
+    title: 'Reggae / Dancehall',
+    host: 'RIENG Radio',
+    schedule: 'Daily | 3:00 PM - 7:00 PM',
+    description: 'Unwind with smooth reggae vibes and infectious dancehall rhythms. Island sounds dominate the airwaves.',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/Raggae.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvUmFnZ2FlLmpwZyIsImlhdCI6MTc3NzUwODg2MywiZXhwIjoxODA5MDQ0ODYzfQ.SeGa4aX2eKNLyVjBQk-PmFDK-0ICQQDBv6dlbJe096I',
     color: 'from-purple-500/20 to-transparent',
-    features: ['Exclusive Dubplates', 'Reggae & Dancehall', 'Club Mixes']
+    features: ['Reggae Classics', 'Dancehall Hits', 'Dubplates']
+  },
+  {
+    title: 'Underground Kenyan HipHop',
+    host: 'RIENG Radio',
+    schedule: 'Daily | 7:00 PM - 11:00 PM',
+    description: 'Featuring Ukoo Flani, Walanguzi, Katapila, Moroko Kalahari, Virusi Mbaya, Shrap, and Wakadinali Drill.',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/UnderGroundHipop.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvVW5kZXJHcm91bmRIaXBvcC5qcGciLCJpYXQiOjE3Nzc1MDg4ODUsImV4cCI6MTgwOTA0NDg4NX0.Y3ZEn6QhhL9irKCzWVVj6NYuGqpXxtHb1gW6h9NXGwA',
+    color: 'from-green-500/20 to-transparent',
+    features: ['Ukoo Flani', 'Walanguzi', 'Wakadinali Drill', 'Shrap']
+  },
+  {
+    title: 'Kenyan RnB',
+    host: 'RIENG Radio',
+    schedule: 'Daily | 11:00 PM - 3:00 AM',
+    description: 'Smooth Kenyan RnB featuring Bensoul, Nviiri, Otile Brown, Kodong Clan, Sauti Sol, and more.',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/KenyanRnB.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvS2VueWFuUm5CLmpwZyIsImlhdCI6MTc3NzUwODkwOSwiZXhwIjoxODA5MDQ0OTA5fQ.5lYCZBD3OfhwpKVQgj2fAzb9B2bp8IgWgkDtjpANdOs',
+    color: 'from-blue-500/20 to-transparent',
+    features: ['Bensoul', 'Nviiri', 'Otile Brown', 'Sauti Sol']
+  },
+  {
+    title: 'Gospel Kenya',
+    host: 'RIENG Radio',
+    schedule: 'Daily | 3:00 AM - 5:00 AM',
+    description: 'Spiritual awakening with Kenya&apos;s finest gospel music. Start your day with uplifting messages and powerful melodies.',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/KenyanGospel.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvS2VueWFuR29zcGVsLmpwZyIsImlhdCI6MTc3NzUwODk1OSwiZXhwIjoxODA5MDQ0OTU5fQ.wt15D0vtF_cJwX5C5Sl_VwkUENwswKyJoD-s0xE2dKM',
+    color: 'from-yellow-500/20 to-transparent',
+    features: ['Gospel Hits', 'Spiritual Messages', 'Uplifting Vibes']
   },
   {
     title: 'SPORTS SHOW',
@@ -96,9 +123,14 @@ export default function ShowsPage() {
           
           let isLive = false;
           if (mounted) {
-            if (show.title.includes('Morning') && currentHour >= 5 && currentHour < 12) isLive = true;
-            if (show.title.includes('Lunch') && currentHour >= 12 && currentHour < 17) isLive = true;
-            if (show.title.includes('Evening') && (currentHour >= 17 || currentHour < 5)) isLive = true;
+            if (show.title === 'Kenyan Old School' && currentHour >= 5 && currentHour < 10) isLive = true;
+            if (show.title === 'Gengetone / Arbantone' && currentHour >= 10 && currentHour < 15) isLive = true;
+            if (show.title === 'Reggae / Dancehall' && currentHour >= 15 && currentHour < 19) isLive = true;
+            if (show.title === 'Underground Kenyan HipHop' && currentHour >= 19 && currentHour < 23) isLive = true;
+            if (show.title === 'Kenyan RnB' && (currentHour >= 23 || currentHour < 3)) isLive = true;
+            if (show.title === 'Gospel Kenya' && currentHour >= 3 && currentHour < 5) isLive = true;
+            if (show.title === 'SPORTS SHOW' && currentHour >= 8 && currentHour < 12) isLive = true;
+            if (show.title === 'POLITICS SHOW' && currentHour >= 19 && currentHour < 22) isLive = true;
           }
 
           return (
