@@ -14,7 +14,9 @@ export default function LivePlayer() {
   // Determine current show based on time of day
   useEffect(() => {
     setMounted(true)
-    const hour = new Date().getHours() // 0-23
+    const now = new Date()
+    const hour = now.getHours() // 0-23
+    const day = now.getDay() // 0 = Sunday, 1 = Monday, etc.
     
     if (hour >= 5 && hour < 10) {
       setCurrentShow({ title: 'Kenyan Old School', host: 'RIENG Radio', image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/KenyanOldSchool.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvS2VueWFuT2xkU2Nob29sLmpwZyIsImlhdCI6MTc3NzUwODgwMSwiZXhwIjoxODA5MDQ0ODAxfQ.5FR3q4quQCmHSW1WyQ-x0YjE0M04o2sQt2zs4u3_Fa0' })
@@ -26,8 +28,10 @@ export default function LivePlayer() {
       setCurrentShow({ title: 'Underground Kenyan HipHop', host: 'RIENG Radio', image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/UnderGroundHipop.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvVW5kZXJHcm91bmRIaXBvcC5qcGciLCJpYXQiOjE3Nzc1MDg4ODUsImV4cCI6MTgwOTA0NDg4NX0.Y3ZEn6QhhL9irKCzWVVj6NYuGqpXxtHb1gW6h9NXGwA' })
     } else if (hour >= 23 || hour < 3) {
       setCurrentShow({ title: 'Kenyan RnB', host: 'RIENG Radio', image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/KenyanRnB.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvS2VueWFuUm5CLmpwZyIsImlhdCI6MTc3NzUwODkwOSwiZXhwIjoxODA5MDQ0OTA5fQ.5lYCZBD3OfhwpKVQgj2fAzb9B2bp8IgWgkDtjpANdOs' })
-    } else {
+    } else if (day === 0 && hour >= 3 && hour < 5) {
       setCurrentShow({ title: 'Gospel Kenya', host: 'RIENG Radio', image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/KenyanGospel.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvS2VueWFuR29zcGVsLmpwZyIsImlhdCI6MTc3NzUwODk1OSwiZXhwIjoxODA5MDQ0OTU5fQ.wt15D0vtF_cJwX5C5Sl_VwkUENwswKyJoD-s0xE2dKM' })
+    } else {
+      setCurrentShow({ title: 'Kenyan Old School', host: 'RIENG Radio', image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/KenyanOldSchool.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvS2VueWFuT2xkU2Nob29sLmpwZyIsImlhdCI6MTc3NzUwODgwMSwiZXhwIjoxODA5MDQ0ODAxfQ.5FR3q4quQCmHSW1WyQ-x0YjE0M04o2sQt2zs4u3_Fa0' })
     }
   }, [])
 
