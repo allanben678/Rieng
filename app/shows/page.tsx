@@ -9,7 +9,7 @@ const dailyShows = [
   {
     title: 'Kenyan Old School',
     host: 'RIENG Radio',
-    schedule: 'Daily | 5:00 AM - 10:00 AM',
+    schedule: 'Weekdays | 5:00 AM - 10:00 AM',
     description: 'Journey through the greatest hits from 2000s to 2004/5 Kenyan music. Featuring e Sir, Mr. Lenny, Kleptomaniax, and Dux Vultures.',
     image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/KenyanOldSchool.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvS2VueWFuT2xkU2Nob29sLmpwZyIsImlhdCI6MTc3NzUwODgwMSwiZXhwIjoxODA5MDQ0ODAxfQ.5FR3q4quQCmHSW1WyQ-x0YjE0M04o2sQt2zs4u3_Fa0',
     color: 'from-orange-500/20 to-transparent',
@@ -18,7 +18,7 @@ const dailyShows = [
   {
     title: 'Gengetone / Arbantone',
     host: 'RIENG Radio',
-    schedule: 'Daily | 10:00 AM - 3:00 PM',
+    schedule: 'Weekdays | 10:00 AM - 3:00 PM',
     description: 'The hardest beats and hottest flows from the Gengetone and Arbantone scenes. Pure energy from Kenya&apos;s underground.',
     image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/Gengetone.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvR2VuZ2V0b25lLmpwZyIsImlhdCI6MTc3NzUwODgzNSwiZXhwIjoxODA5MDQ0ODM1fQ.edECFW-1vDOXHHpQ7emyRfNPyDjDnbOAD5sdKAHuUcI',
     color: 'from-red-500/20 to-transparent',
@@ -27,7 +27,7 @@ const dailyShows = [
   {
     title: 'Reggae / Dancehall',
     host: 'RIENG Radio',
-    schedule: 'Daily | 3:00 PM - 7:00 PM',
+    schedule: 'Weekdays | 3:00 PM - 7:00 PM',
     description: 'Unwind with smooth reggae vibes and infectious dancehall rhythms. Island sounds dominate the airwaves.',
     image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/Raggae.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvUmFnZ2FlLmpwZyIsImlhdCI6MTc3NzUwODg2MywiZXhwIjoxODA5MDQ0ODYzfQ.SeGa4aX2eKNLyVjBQk-PmFDK-0ICQQDBv6dlbJe096I',
     color: 'from-purple-500/20 to-transparent',
@@ -36,7 +36,7 @@ const dailyShows = [
   {
     title: 'Underground Kenyan HipHop',
     host: 'RIENG Radio',
-    schedule: 'Daily | 7:00 PM - 11:00 PM',
+    schedule: 'Weekdays | 7:00 PM - 11:00 PM',
     description: 'Featuring Ukoo Flani, Walanguzi, Katapila, Moroko Kalahari, Virusi Mbaya, Shrap, and Wakadinali Drill.',
     image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/UnderGroundHipop.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvVW5kZXJHcm91bmRIaXBvcC5qcGciLCJpYXQiOjE3Nzc1MDg4ODUsImV4cCI6MTgwOTA0NDg4NX0.Y3ZEn6QhhL9irKCzWVVj6NYuGqpXxtHb1gW6h9NXGwA',
     color: 'from-green-500/20 to-transparent',
@@ -45,7 +45,7 @@ const dailyShows = [
   {
     title: 'Kenyan RnB',
     host: 'RIENG Radio',
-    schedule: 'Daily | 11:00 PM - 3:00 AM',
+    schedule: 'Weekdays | 11:00 PM - 3:00 AM',
     description: 'Smooth Kenyan RnB featuring Bensoul, Nviiri, Otile Brown, Kodong Clan, Sauti Sol, and more.',
     image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/KenyanRnB.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvS2VueWFuUm5CLmpwZyIsImlhdCI6MTc3NzUwODkwOSwiZXhwIjoxODA5MDQ0OTA5fQ.5lYCZBD3OfhwpKVQgj2fAzb9B2bp8IgWgkDtjpANdOs',
     color: 'from-blue-500/20 to-transparent',
@@ -54,7 +54,7 @@ const dailyShows = [
   {
     title: 'Gospel Kenya',
     host: 'RIENG Radio',
-    schedule: 'Daily | 3:00 AM - 5:00 AM',
+    schedule: 'Sundays | All Day',
     description: 'Spiritual awakening with Kenya&apos;s finest gospel music. Start your day with uplifting messages and powerful melodies.',
     image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/KenyanGospel.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvS2VueWFuR29zcGVsLmpwZyIsImlhdCI6MTc3NzUwODk1OSwiZXhwIjoxODA5MDQ0OTU5fQ.wt15D0vtF_cJwX5C5Sl_VwkUENwswKyJoD-s0xE2dKM',
     color: 'from-yellow-500/20 to-transparent',
@@ -72,7 +72,7 @@ const dailyShows = [
   {
     title: 'POLITICS SHOW',
     host: 'Boneye',
-    schedule: 'Thursdays & Sundays | 7:00 PM - 10:00 PM',
+    schedule: 'Saturday | 3:00 PM - 7:00 PM',
     description: 'In-depth political interviews with leading politicians and presidential aspirants. No questions off-limits.',
     image: '/TeloandBura.jpg',
     color: 'from-blue-500/20 to-transparent',
@@ -82,10 +82,13 @@ const dailyShows = [
 
 export default function ShowsPage() {
   const [currentHour, setCurrentHour] = useState(12)
+  const [currentDay, setCurrentDay] = useState(0)
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setCurrentHour(new Date().getHours())
+    const now = new Date()
+    setCurrentHour(now.getHours())
+    setCurrentDay(now.getDay())
     setMounted(true)
   }, [])
 
@@ -128,9 +131,9 @@ export default function ShowsPage() {
             if (show.title === 'Reggae / Dancehall' && currentHour >= 15 && currentHour < 19) isLive = true;
             if (show.title === 'Underground Kenyan HipHop' && currentHour >= 19 && currentHour < 23) isLive = true;
             if (show.title === 'Kenyan RnB' && (currentHour >= 23 || currentHour < 3)) isLive = true;
-            if (show.title === 'Gospel Kenya' && currentHour >= 3 && currentHour < 5) isLive = true;
-            if (show.title === 'SPORTS SHOW' && currentHour >= 8 && currentHour < 12) isLive = true;
-            if (show.title === 'POLITICS SHOW' && currentHour >= 19 && currentHour < 22) isLive = true;
+            if (show.title === 'Gospel Kenya' && currentDay === 0) isLive = true;
+            if (show.title === 'SPORTS SHOW' && currentDay === 6 && currentHour >= 8 && currentHour < 12) isLive = true;
+            if (show.title === 'POLITICS SHOW' && currentDay === 6 && currentHour >= 15 && currentHour < 19) isLive = true;
           }
 
           return (
