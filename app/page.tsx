@@ -31,7 +31,7 @@ const dailyShows = [
     host: 'RIENG Radio',
     schedule: 'Weekdays | 3:00 PM - 7:00 PM',
     description: 'Unwind with smooth reggae vibes and infectious dancehall rhythms. Island sounds dominate the airwaves.',
-    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/Raggae.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvUmFnZ2FlLmpwZyIsImlhdCI6MTc3NzUwODg2MywiZXhwIjoxODA5MDQ0ODYzfQ.SeGa4aX2eKNLyVjBQk-PmFDK-0ICQQDBv6dlbJe096I',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Reggae.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1JlZ2dhZS5qcGciLCJpYXQiOjE3Nzc2MTg3MDMsImV4cCI6MTgwOTE1NDcwM30.rcWa7oHOxsnZG_cO-6TTAwpPYr147JuCiF8Dk6Ie13s',
   },
 ]
 
