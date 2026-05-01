@@ -29,7 +29,7 @@ const dailyShows = [
     host: 'RIENG Radio',
     schedule: 'Weekdays | 3:00 PM - 7:00 PM',
     description: 'Unwind with smooth reggae vibes and infectious dancehall rhythms. Island sounds dominate the airwaves.',
-    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/Raggae.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvUmFnZ2FlLmpwZyIsImlhdCI6MTc3NzUwODg2MywiZXhwIjoxODA5MDQ0ODYzfQ.SeGa4aX2eKNLyVjBQk-PmFDK-0ICQQDBv6dlbJe096I',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Reggae.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1JlZ2dhZS5qcGciLCJpYXQiOjE3Nzc2MTg3MDMsImV4cCI6MTgwOTE1NDcwM30.rcWa7oHOxsnZG_cO-6TTAwpPYr147JuCiF8Dk6Ie13s',
     color: 'from-purple-500/20 to-transparent',
     features: ['Reggae Classics', 'Dancehall Hits', 'Dubplates']
   },
@@ -38,7 +38,7 @@ const dailyShows = [
     host: 'RIENG Radio',
     schedule: 'Weekdays | 7:00 PM - 11:00 PM',
     description: 'Featuring Ukoo Flani, Walanguzi, Katapila, Moroko Kalahari, Virusi Mbaya, Shrap, and Wakadinali Drill.',
-    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/UnderGroundHipop.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvVW5kZXJHcm91bmRIaXBvcC5qcGciLCJpYXQiOjE3Nzc1MDg4ODUsImV4cCI6MTgwOTA0NDg4NX0.Y3ZEn6QhhL9irKCzWVVj6NYuGqpXxtHb1gW6h9NXGwA',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Underground.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1VuZGVyZ3JvdW5kLmpwZyIsImlhdCI6MTc3NzYxODc3OSwiZXhwIjoxODA5MTU0Nzc5fQ.6lJzUQFJSgdjCajfBQFKmJXnzMgJURDJmUXkRV4Fd8E',
     color: 'from-green-500/20 to-transparent',
     features: ['Ukoo Flani', 'Walanguzi', 'Wakadinali Drill', 'Shrap']
   },
@@ -47,16 +47,16 @@ const dailyShows = [
     host: 'RIENG Radio',
     schedule: 'Weekdays | 11:00 PM - 3:00 AM',
     description: 'Smooth Kenyan RnB featuring Bensoul, Nviiri, Otile Brown, Kodong Clan, Sauti Sol, and more.',
-    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/KenyanRnB.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvS2VueWFuUm5CLmpwZyIsImlhdCI6MTc3NzUwODkwOSwiZXhwIjoxODA5MDQ0OTA5fQ.5lYCZBD3OfhwpKVQgj2fAzb9B2bp8IgWgkDtjpANdOs',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/RnB.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1JuQi5qcGciLCJpYXQiOjE3Nzc2MTg3NTIsImV4cCI6MTgwOTE1NDc1Mn0.bECtwTIvCNZwGLHi2HHKkopAqJtoHXeTQ8MdtUijntE',
     color: 'from-blue-500/20 to-transparent',
     features: ['Bensoul', 'Nviiri', 'Otile Brown', 'Sauti Sol']
   },
   {
     title: 'Gospel Kenya',
     host: 'RIENG Radio',
-    schedule: 'Sundays | All Day',
+    schedule: 'Sundays | All Day + Daily | 3:00 AM - 5:00 AM',
     description: 'Spiritual awakening with Kenya&apos;s finest gospel music. Start your day with uplifting messages and powerful melodies.',
-    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/KenyanGospel.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvS2VueWFuR29zcGVsLmpwZyIsImlhdCI6MTc3NzUwODk1OSwiZXhwIjoxODA5MDQ0OTU5fQ.wt15D0vtF_cJwX5C5Sl_VwkUENwswKyJoD-s0xE2dKM',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Gospel.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL0dvc3BlbC5qcGciLCJpYXQiOjE3Nzc2MTg2OTAsImV4cCI6MTgwOTE1NDY5MH0.FiCgYciSVoTbmjsZ039KJG8_hlbPa18hY7rl10hUzrw',
     color: 'from-yellow-500/20 to-transparent',
     features: ['Gospel Hits', 'Spiritual Messages', 'Uplifting Vibes']
   },
@@ -131,7 +131,7 @@ export default function ShowsPage() {
             if (show.title === 'Reggae / Dancehall' && currentHour >= 15 && currentHour < 19) isLive = true;
             if (show.title === 'Underground Kenyan HipHop' && currentHour >= 19 && currentHour < 23) isLive = true;
             if (show.title === 'Kenyan RnB' && (currentHour >= 23 || currentHour < 3)) isLive = true;
-            if (show.title === 'Gospel Kenya' && currentDay === 0) isLive = true;
+            if (show.title === 'Gospel Kenya' && (currentDay === 0 || (currentHour >= 3 && currentHour < 5))) isLive = true;
             if (show.title === 'SPORTS SHOW' && currentDay === 6 && currentHour >= 8 && currentHour < 12) isLive = true;
             if (show.title === 'POLITICS SHOW' && currentDay === 6 && currentHour >= 15 && currentHour < 19) isLive = true;
           }
