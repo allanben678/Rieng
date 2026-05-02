@@ -4,31 +4,22 @@ import { useEffect } from 'react'
 
 export default function SmoothScroll() {
   useEffect(() => {
-    let isScrolling = false
-    let scrollVelocity = 0
-    let currentScroll = 0
+    let scrollTimeout: NodeJS.Timeout
 
     const handleWheel = (e: WheelEvent) => {
-      e.preventDefault()
-
-      scrollVelocity = e.deltaY * 0.3
-
-      if (!isScrolling) {
-        isScrolling = true
-        animateScroll()
-      }
-    }
-
-    const animateScroll = () => {
-      currentScroll += scrollVelocity
-      scrollVelocity *= 0.95
-
-      window.scrollTo(0, currentScroll)
-
-      if (Math.abs(scrollVelocity) > 0.5) {
-        requestAnimationFrame(animateScroll)
-      } else {
-        isScrolling = false
+      // Reduce scroll speed by intercepting wheel events
+      if (Math.abs(e.deltaY) > 0) {
+        e.preventDefault()
+        
+        // Clear previous timeout to prevent queue buildup
+        clearTimeout(scrollTimeout)
+        
+        // Apply reduced scroll speed (60% of original)
+        const newScroll = window.scrollY + e.deltaY * 0.6
+        window.scrollTo({
+          top: newScroll,
+          behavior: 'auto',
+        })
       }
     }
 
@@ -36,6 +27,7 @@ export default function SmoothScroll() {
 
     return () => {
       window.removeEventListener('wheel', handleWheel)
+      clearTimeout(scrollTimeout)
     }
   }, [])
 
