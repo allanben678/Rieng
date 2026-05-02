@@ -4,22 +4,35 @@ import { useEffect } from 'react'
 
 export default function SmoothScroll() {
   useEffect(() => {
-    let scrollTimeout: NodeJS.Timeout
+    let targetScroll = window.scrollY
+    let currentScroll = window.scrollY
+    let animationId: number | null = null
+    let lastWheelTime = 0
 
     const handleWheel = (e: WheelEvent) => {
-      // Reduce scroll speed by intercepting wheel events
-      if (Math.abs(e.deltaY) > 0) {
-        e.preventDefault()
-        
-        // Clear previous timeout to prevent queue buildup
-        clearTimeout(scrollTimeout)
-        
-        // Apply reduced scroll speed (60% of original)
-        const newScroll = window.scrollY + e.deltaY * 0.6
-        window.scrollTo({
-          top: newScroll,
-          behavior: 'auto',
-        })
+      e.preventDefault()
+      
+      lastWheelTime = Date.now()
+      // Reduce scroll speed by multiplying delta by 0.4
+      targetScroll += e.deltaY * 0.4
+      targetScroll = Math.max(0, Math.min(targetScroll, document.documentElement.scrollHeight - window.innerHeight))
+
+      if (!animationId) {
+        animateScroll()
+      }
+    }
+
+    const animateScroll = () => {
+      const diff = targetScroll - currentScroll
+      currentScroll += diff * 0.15 // Smooth easing
+
+      window.scrollTo(0, currentScroll)
+
+      // Continue animation if there's still a difference or recent wheel events
+      if (Math.abs(diff) > 0.5 || Date.now() - lastWheelTime < 100) {
+        animationId = requestAnimationFrame(animateScroll)
+      } else {
+        animationId = null
       }
     }
 
@@ -27,7 +40,9 @@ export default function SmoothScroll() {
 
     return () => {
       window.removeEventListener('wheel', handleWheel)
-      clearTimeout(scrollTimeout)
+      if (animationId) {
+        cancelAnimationFrame(animationId)
+      }
     }
   }, [])
 
