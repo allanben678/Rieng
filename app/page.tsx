@@ -1,4 +1,8 @@
+'use client'
+
 import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 import Navbar from '@/components/Navbar'
 import HeroSection from '@/components/HeroSection'
 import LivePlayer from '@/components/LivePlayer'
@@ -10,6 +14,41 @@ import BuySongPromo from '@/components/BuySongPromo'
 import SectionTitle from '@/components/SectionTitle'
 import Footer from '@/components/Footer'
 import PartnersSlider from '@/components/PartnersSlider'
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: 'easeOut',
+    },
+  },
+}
+
+const headerVariants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: 'easeOut',
+    },
+  },
+}
 
 const dailyShows = [
   {
@@ -97,7 +136,46 @@ const riengReviews = [
 
 
 
+function AnimatedShowsSection() {
+  const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true })
+
+  return (
+    <section ref={ref} className="bg-background py-16 md:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          variants={headerVariants}
+          className="flex items-center justify-between mb-12"
+        >
+          <div>
+            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight mb-2">The <span className="text-primary italic">Line-Up</span></h2>
+            <p className="text-gray-400 font-medium md:text-lg">The most lethal daily schedule on Kenyan airwaves.</p>
+          </div>
+          <Link href="/shows" className="text-primary hover:text-accent font-semibold transition-colors">View All →</Link>
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          variants={containerVariants}
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {dailyShows.map((show, index) => (
+            <motion.div key={index} variants={itemVariants}>
+              <ShowCard {...show} />
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  )
+}
+
 export default function Home() {
+  const { ref: trendingRef, inView: trendingInView } = useInView({ threshold: 0.1, triggerOnce: true })
+  const { ref: videoRef, inView: videoInView } = useInView({ threshold: 0.1, triggerOnce: true })
+  const { ref: reviewRef, inView: reviewInView } = useInView({ threshold: 0.1, triggerOnce: true })
+
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
@@ -109,41 +187,38 @@ export default function Home() {
       <LivePlayer />
 
       {/* Featured Shows Preview */}
-      <section className="bg-background py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-12">
-            <div>
-              <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight mb-2">The <span className="text-primary italic">Line-Up</span></h2>
-              <p className="text-gray-400 font-medium md:text-lg">The most lethal daily schedule on Kenyan airwaves.</p>
-            </div>
-            <Link href="/shows" className="text-primary hover:text-accent font-semibold transition-colors">View All →</Link>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {dailyShows.map((show, index) => (
-              <ShowCard key={index} {...show} />
-            ))}
-          </div>
-        </div>
-      </section>
+      <AnimatedShowsSection />
 
       {/* Partners Slider Section */}
       <PartnersSlider />
 
       {/* Trending Now Section */}
-      <section className="bg-background py-16 md:py-20 relative overflow-hidden">
+      <section ref={trendingRef} className="bg-background py-16 md:py-20 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex items-center justify-between mb-12">
+          <motion.div
+            initial="hidden"
+            animate={trendingInView ? 'visible' : 'hidden'}
+            variants={headerVariants}
+            className="flex items-center justify-between mb-12"
+          >
             <div>
               <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight mb-2">Trending <span className="text-primary italic">Now</span></h2>
               <p className="text-gray-400 font-medium md:text-lg">The hottest stories and tracks dominating Kenyan culture.</p>
             </div>
             <Link href="/trending" className="text-primary hover:text-accent font-semibold transition-colors uppercase tracking-widest text-sm">View All →</Link>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            animate={trendingInView ? 'visible' : 'hidden'}
+            variants={containerVariants}
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
             {trendingContent.map((item, index) => (
-              <MediaCard key={index} {...item} />
+              <motion.div key={index} variants={itemVariants}>
+                <MediaCard {...item} />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -151,10 +226,15 @@ export default function Home() {
       <BuySongPromo />
 
       {/* Featured Videos Preview */}
-      <section className="bg-card py-16 md:py-20 relative overflow-hidden">
+      <section ref={videoRef} className="bg-card py-16 md:py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-red-500/5"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <motion.div
+            initial="hidden"
+            animate={videoInView ? 'visible' : 'hidden'}
+            variants={headerVariants}
+            className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"
+          >
             <div>
               <div className="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/20 text-red-500 px-4 py-1.5 rounded-full mb-6 relative">
                  <span className="absolute inset-0 bg-red-500/20 animate-ping rounded-full opacity-50"></span>
@@ -164,36 +244,61 @@ export default function Home() {
               <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight mb-2">RIENG <span className="text-red-500 italic">TV</span></h2>
               <p className="text-gray-400 font-medium md:text-lg max-w-2xl">The wildest games, live sets, and moments that defined Kenyan culture.</p>
             </div>
-            <a href="https://www.youtube.com/@RiengRadio" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:text-white font-extrabold transition-colors uppercase tracking-widest text-sm bg-red-500/10 px-8 py-4 rounded-full border border-red-500/20 hover:bg-red-500 flex-shrink-0 flex items-center gap-2 shadow-[0_0_20px_rgba(239,68,68,0.2)]">
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="https://www.youtube.com/@RiengRadio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-red-500 hover:text-white font-extrabold transition-colors uppercase tracking-widest text-sm bg-red-500/10 px-8 py-4 rounded-full border border-red-500/20 hover:bg-red-500 flex-shrink-0 flex items-center gap-2 shadow-[0_0_20px_rgba(239,68,68,0.2)]"
+            >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
               Subscribe on YouTube
-            </a>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            </motion.a>
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            animate={videoInView ? 'visible' : 'hidden'}
+            variants={containerVariants}
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
             {riengVideos.map((video, index) => (
-              <VideoCard key={index} {...video} />
+              <motion.div key={index} variants={itemVariants}>
+                <VideoCard {...video} />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Featured Album Reviews Preview */}
-      {/* Featured Album Reviews Preview */}
-      <section className="bg-background py-16 md:py-20 relative overflow-hidden border-t border-white/5">
+      <section ref={reviewRef} className="bg-background py-16 md:py-20 relative overflow-hidden border-t border-white/5">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none -mt-48 -mr-48"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <motion.div
+            initial="hidden"
+            animate={reviewInView ? 'visible' : 'hidden'}
+            variants={headerVariants}
+            className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"
+          >
             <div>
               <p className="text-xs font-bold tracking-[0.4em] text-primary uppercase mb-2">The Breakdown</p>
               <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight mb-2">Album <span className="text-primary italic">Reviews</span></h2>
               <p className="text-gray-400 font-medium md:text-lg max-w-2xl">Expert breakdowns on the most important Kenyan projects dropping right now.</p>
             </div>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            animate={reviewInView ? 'visible' : 'hidden'}
+            variants={containerVariants}
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
             {riengReviews.map((review, index) => (
-              <ReviewCard key={index} {...review} />
+              <motion.div key={index} variants={itemVariants}>
+                <ReviewCard {...review} />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
