@@ -64,7 +64,7 @@ export default function LivePlayer() {
   return (
     <section id="live-player" className="bg-background py-8 md:py-12 border-b border-border shadow-2xl relative z-20 scroll-mt-24">
       {/* Hidden Audio Element */}
-      <audio ref={audioRef} src="https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/audio.mp3?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvYXVkaW8ubXAzIiwiaWF0IjoxNzc3Mzc2ODMxLCJleHAiOjE4MDg5MTI4MzF9.UqjT_9KjcAVZt_zmLObcoQdGUDJUcQRgJjhW6ZvZCy4" preload="none" />
+      <audio ref={audioRef} src="https://riengradio.xubi.org/api/nowplaying/stream" preload="none" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative bg-[#0a0a0a] overflow-hidden rounded-[2rem] border border-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
