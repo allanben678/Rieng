@@ -27,7 +27,7 @@ const dailyShows = [
   {
     title: 'Reggae / Dancehall',
     host: 'RIENG Radio',
-    schedule: 'Weekdays | 3:00 PM - 7:00 PM',
+    schedule: 'Weekdays | 11:00 PM - 3:00 AM',
     description: 'Unwind with smooth reggae vibes and infectious dancehall rhythms. Island sounds dominate the airwaves.',
     image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Reggae.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1JlZ2dhZS5qcGciLCJpYXQiOjE3Nzc2MTg3MDMsImV4cCI6MTgwOTE1NDcwM30.rcWa7oHOxsnZG_cO-6TTAwpPYr147JuCiF8Dk6Ie13s',
     color: 'from-purple-500/20 to-transparent',
@@ -45,7 +45,7 @@ const dailyShows = [
   {
     title: 'Kenyan RnB',
     host: 'RIENG Radio',
-    schedule: 'Weekdays | 11:00 PM - 3:00 AM',
+    schedule: 'Weekdays | 3:00 PM - 7:00 PM',
     description: 'Smooth Kenyan RnB featuring Bensoul, Nviiri, Otile Brown, Kodong Clan, Sauti Sol, and more.',
     image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/RnB.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1JuQi5qcGciLCJpYXQiOjE3Nzc2MTg3NTIsImV4cCI6MTgwOTE1NDc1Mn0.bECtwTIvCNZwGLHi2HHKkopAqJtoHXeTQ8MdtUijntE',
     color: 'from-blue-500/20 to-transparent',
@@ -128,9 +128,9 @@ export default function ShowsPage() {
           if (mounted) {
             if (show.title === 'Kenyan Old School' && currentHour >= 5 && currentHour < 10) isLive = true;
             if (show.title === 'Gengetone / Arbantone' && currentHour >= 10 && currentHour < 15) isLive = true;
-            if (show.title === 'Reggae / Dancehall' && currentHour >= 15 && currentHour < 19) isLive = true;
+            if (show.title === 'Reggae / Dancehall' && (currentHour >= 23 || currentHour < 3)) isLive = true;
             if (show.title === 'Underground Kenyan HipHop' && currentHour >= 19 && currentHour < 23) isLive = true;
-            if (show.title === 'Kenyan RnB' && (currentHour >= 23 || currentHour < 3)) isLive = true;
+            if (show.title === 'Kenyan RnB' && currentHour >= 15 && currentHour < 19) isLive = true;
             if (show.title === 'Gospel Kenya' && (currentDay === 0 || (currentHour >= 3 && currentHour < 5))) isLive = true;
             if (show.title === 'SPORTS SHOW' && currentDay === 6 && currentHour >= 8 && currentHour < 12) isLive = true;
             if (show.title === 'POLITICS SHOW' && currentDay === 6 && currentHour >= 15 && currentHour < 19) isLive = true;

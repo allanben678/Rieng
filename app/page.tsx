@@ -68,7 +68,7 @@ const dailyShows = [
   {
     title: 'Reggae / Dancehall',
     host: 'RIENG Radio',
-    schedule: 'Weekdays | 3:00 PM - 7:00 PM',
+    schedule: 'Weekdays | 11:00 PM - 3:00 AM',
     description: 'Unwind with smooth reggae vibes and infectious dancehall rhythms. Island sounds dominate the airwaves.',
     image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Reggae.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1JlZ2dhZS5qcGciLCJpYXQiOjE3Nzc2MTg3MDMsImV4cCI6MTgwOTE1NDcwM30.rcWa7oHOxsnZG_cO-6TTAwpPYr147JuCiF8Dk6Ie13s',
   },
