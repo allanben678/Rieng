@@ -1,15 +1,18 @@
 import Image from 'next/image';
 
 const partners = [
-  { name: 'Spotify', src: '/Spotify.png' },
-  { name: 'Apple Music', src: '/AppleMusic.png' },
-  { name: 'Amazon Music', src: '/AmazonMusic.png' },
-  { name: 'TuneIn', src: '/TuneIn.png' },
-  { name: 'PocketCast', src: '/PocketCast.jpg' },
-  { name: 'CastBox', src: '/CastBox.jpg' },
-  { name: 'Equity Bank', src: '/EquityBank.png' },
-  { name: 'HustleSasa', src: '/HustleSasa.png' },
-  { name: 'Black Market Media', src: '/BlackMarketMedia.jpg' },
+  { 
+    name: '22Bet', 
+    src: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/Sponsors/22Bet.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvU3BvbnNvcnMvMjJCZXQuanBnIiwiaWF0IjoxNzc4MzM5MDMxLCJleHAiOjE4MDk4NzUwMzF9.wZlUE9pgkWFexQMh8qeMpacN7zia4iQC-cU9V3R3EGE' 
+  },
+  { 
+    name: 'Equity', 
+    src: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/Sponsors/Equity.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvU3BvbnNvcnMvRXF1aXR5LmpwZyIsImlhdCI6MTc3ODMzOTA1MSwiZXhwIjoxODA5ODc1MDUxfQ.rjv_kCzKna2bMuAtAYsiofhP09RJHU6xhXPm6VmK-QY' 
+  },
+  { 
+    name: 'Quickmart', 
+    src: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/Sponsors/QuickMart.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvU3BvbnNvcnMvUXVpY2tNYXJ0LmpwZyIsImlhdCI6MTc3ODMzOTA2NiwiZXhwIjoxODA5ODc1MDY2fQ.CzkYA_R572DyKLyvbyovK80PSzvYZ2tjF_WIN-sN4iQ' 
+  },
 ];
 
 export default function PartnersSlider() {
