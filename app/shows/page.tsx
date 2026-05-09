@@ -29,7 +29,7 @@ const dailyShows = [
     host: 'RIENG Radio',
     schedule: 'Weekdays | 11:00 PM - 3:00 AM',
     description: 'Unwind with smooth reggae vibes and infectious dancehall rhythms. Island sounds dominate the airwaves.',
-    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Reggae.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1JlZ2dhZS5qcGciLCJpYXQiOjE3Nzc2MTg3MDMsImV4cCI6MTgwOTE1NDcwM30.rcWa7oHOxsnZG_cO-6TTAwpPYr147JuCiF8Dk6Ie13s',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Reggae.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1JlZ2dhZS5qcGciLCJpYXQiOjE3NzgzNDE2OTksImV4cCI6MTgwOTg3NzY5OX0.5CfMQUSgW86V6dKlG3p6Dv4pWYB_foN-h-1q2sIkKAU',
     color: 'from-purple-500/20 to-transparent',
     features: ['Reggae Classics', 'Dancehall Hits', 'Dubplates']
   },
@@ -47,7 +47,7 @@ const dailyShows = [
     host: 'RIENG Radio',
     schedule: 'Weekdays | 3:00 PM - 7:00 PM',
     description: 'Smooth Kenyan RnB featuring Bensoul, Nviiri, Otile Brown, Kodong Clan, Sauti Sol, and more.',
-    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/RnB.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1JuQi5qcGciLCJpYXQiOjE3Nzc2MTg3NTIsImV4cCI6MTgwOTE1NDc1Mn0.bECtwTIvCNZwGLHi2HHKkopAqJtoHXeTQ8MdtUijntE',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/RnB.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1JuQi5qcGciLCJpYXQiOjE3NzgzNDE3NTYsImV4cCI6MTgwOTg3Nzc1Nn0.p7-7R4hDM1bO3ueOTNTi6-3leLcyp4jjB61w7nDl3f8',
     color: 'from-blue-500/20 to-transparent',
     features: ['Bensoul', 'Nviiri', 'Otile Brown', 'Sauti Sol']
   },
