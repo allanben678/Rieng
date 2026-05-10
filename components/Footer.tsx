@@ -113,7 +113,7 @@ export default function Footer() {
             <h3 className="text-white font-black uppercase tracking-widest text-sm mb-6">Legal & Info</h3>
             <ul className="space-y-4">
               <li><Link href="#" className="text-gray-400 hover:text-white hover:translate-x-1 block transition-transform font-medium text-sm w-max">About Us</Link></li>
-              <li><a href="tel:+254799649400" className="text-gray-400 hover:text-white hover:translate-x-1 block transition-transform font-medium text-sm w-max">Contact Studio</a></li>
+              <li><a href="tel:+254114021853" className="text-gray-400 hover:text-white hover:translate-x-1 block transition-transform font-medium text-sm w-max">Contact Studio</a></li>
               <li><Link href="#" className="text-gray-400 hover:text-white hover:translate-x-1 block transition-transform font-medium text-sm w-max">Privacy Policy</Link></li>
               <li><Link href="#" className="text-gray-400 hover:text-white hover:translate-x-1 block transition-transform font-medium text-sm w-max">Terms of Service</Link></li>
               <li><Link href="#" className="text-gray-400 hover:text-white hover:translate-x-1 block transition-transform font-medium text-sm w-max">Cookie Policy</Link></li>
