@@ -27,9 +27,9 @@ const dailyShows = [
   {
     title: 'Reggae / Dancehall',
     host: 'RIENG Radio',
-    schedule: 'Weekdays | 11:00 PM - 3:00 AM',
+    schedule: 'Weekdays | 3:00 PM - 7:00 PM',
     description: 'Unwind with smooth reggae vibes and infectious dancehall rhythms. Island sounds dominate the airwaves.',
-    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Reggae.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1JlZ2dhZS5qcGciLCJpYXQiOjE3NzgzNDE2OTksImV4cCI6MTgwOTg3NzY5OX0.5CfMQUSgW86V6dKlG3p6Dv4pWYB_foN-h-1q2sIkKAU',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/Raggae.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvUmFnZ2FlLmpwZyIsImlhdCI6MTc3ODUxMzI2NSwiZXhwIjoxODEwMDQ5MjY1fQ.Q-717azWOQRaqgStONVGsO_XlxsxNbVu7vTiinebyAg',
     color: 'from-purple-500/20 to-transparent',
     features: ['Reggae Classics', 'Dancehall Hits', 'Dubplates']
   },
@@ -45,9 +45,9 @@ const dailyShows = [
   {
     title: 'Kenyan RnB',
     host: 'RIENG Radio',
-    schedule: 'Weekdays | 3:00 PM - 7:00 PM',
+    schedule: 'Weekdays | 11:00 PM - 3:00 AM',
     description: 'Smooth Kenyan RnB featuring Bensoul, Nviiri, Otile Brown, Kodong Clan, Sauti Sol, and more.',
-    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/RnB.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1JuQi5qcGciLCJpYXQiOjE3NzgzNDE3NTYsImV4cCI6MTgwOTg3Nzc1Nn0.p7-7R4hDM1bO3ueOTNTi6-3leLcyp4jjB61w7nDl3f8',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/KenyanRnB.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvS2VueWFuUm5CLmpwZyIsImlhdCI6MTc3ODUxMzMxMywiZXhwIjoxODEwMDQ5MzEzfQ.DEbuexELYYSxv2iP7N5oRvsYjHIebYmuEK5hTn5h4Ls',
     color: 'from-blue-500/20 to-transparent',
     features: ['Bensoul', 'Nviiri', 'Otile Brown', 'Sauti Sol']
   },
@@ -128,9 +128,9 @@ export default function ShowsPage() {
           if (mounted) {
             if (show.title === 'Kenyan Old School' && currentHour >= 5 && currentHour < 10) isLive = true;
             if (show.title === 'Gengetone / Arbantone' && currentHour >= 10 && currentHour < 15) isLive = true;
-            if (show.title === 'Reggae / Dancehall' && (currentHour >= 23 || currentHour < 3)) isLive = true;
+            if (show.title === 'Reggae / Dancehall' && currentHour >= 15 && currentHour < 19) isLive = true;
             if (show.title === 'Underground Kenyan HipHop' && currentHour >= 19 && currentHour < 23) isLive = true;
-            if (show.title === 'Kenyan RnB' && currentHour >= 15 && currentHour < 19) isLive = true;
+            if (show.title === 'Kenyan RnB' && (currentHour >= 23 || currentHour < 3)) isLive = true;
             if (show.title === 'Gospel Kenya' && (currentDay === 0 || (currentHour >= 3 && currentHour < 5))) isLive = true;
             if (show.title === 'SPORTS SHOW' && currentDay === 6 && currentHour >= 8 && currentHour < 12) isLive = true;
             if (show.title === 'POLITICS SHOW' && currentDay === 6 && currentHour >= 15 && currentHour < 19) isLive = true;
