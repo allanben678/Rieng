@@ -38,7 +38,7 @@ const dailyShows = [
     host: 'RIENG Radio',
     schedule: 'Weekdays | 7:00 PM - 11:00 PM',
     description: 'Featuring Ukoo Flani, Walanguzi, Katapila, Moroko Kalahari, Virusi Mbaya, Shrap, and Wakadinali Drill.',
-    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Underground.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1VuZGVyZ3JvdW5kLmpwZyIsImlhdCI6MTc3NzYxODc3OSwiZXhwIjoxODA5MTU0Nzc5fQ.6lJzUQFJSgdjCajfBQFKmJXnzMgJURDJmUXkRV4Fd8E',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Underground.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1VuZGVyZ3JvdW5kLmpwZyIsImlhdCI6MTc3ODg2NTkxMSwiZXhwIjoxODEwNDAxOTExfQ.IHkEX0JfNNE6jrrJquHFecKXop1cm6_xa9YFZ9hxz_4',
     color: 'from-green-500/20 to-transparent',
     features: ['Ukoo Flani', 'Walanguzi', 'Wakadinali Drill', 'Shrap']
   },
