@@ -29,7 +29,7 @@ const dailyShows = [
     host: 'inkmatic',
     schedule: 'Weekdays | 3:00 PM - 7:00 PM',
     description: 'Unwind with smooth reggae vibes and infectious dancehall rhythms. Island sounds dominate the airwaves.',
-    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/Updated_Artist.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZF9BcnRpc3QuanBnIiwiaWF0IjoxNzc4ODI3MzM0LCJleHAiOjE4MTAzNjMzMzR9.UiaGD8ngpxpAgDY3I3cP9K1zwZ7n6hbR4A6fIqs4t2E',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/InkMatik.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvSW5rTWF0aWsuanBnIiwiaWF0IjoxNzc4ODYyNTY3LCJleHAiOjE4MTAzOTg1Njd9.PGiJ15a-fGAhA8e0v2HZwnkVIP2jBx4KSrWiPuwX-fA',
     color: 'from-purple-500/20 to-transparent',
     features: ['Reggae Classics', 'Dancehall Hits', 'Dubplates']
   },
