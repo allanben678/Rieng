@@ -17,7 +17,7 @@ const dailyShows = [
   },
   {
     title: 'Gengetone / Arbantone',
-    host: 'RIENG Radio',
+    host: 'Kartelo',
     schedule: 'Weekdays | 10:00 AM - 3:00 PM',
     description: 'The hardest beats and hottest flows from the Gengetone and Arbantone scenes. Pure energy from Kenya&apos;s underground.',
     image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Gengetone.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL0dlbmdldG9uZS5qcGciLCJpYXQiOjE3Nzg4NjQ1NDksImV4cCI6MTgxMDQwMDU0OX0.oNH6E5Rn6OXIvquWSBtfFFVUB6aT9U0F_5Shbu0P7dI',
@@ -35,10 +35,10 @@ const dailyShows = [
   },
   {
     title: 'Underground Kenyan HipHop',
-    host: 'RIENG Radio',
+    host: 'Joy Ohon',
     schedule: 'Weekdays | 7:00 PM - 11:00 PM',
     description: 'Featuring Ukoo Flani, Walanguzi, Katapila, Moroko Kalahari, Virusi Mbaya, Shrap, and Wakadinali Drill.',
-    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Underground.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1VuZGVyZ3JvdW5kLmpwZyIsImlhdCI6MTc3ODg2NTkxMSwiZXhwIjoxODEwNDAxOTExfQ.IHkEX0JfNNE6jrrJquHFecKXop1cm6_xa9YFZ9hxz_4',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Underground.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1VuZGVyZ3JvdW5kLmpwZyIsImlhdCI6MTc3ODkyMTU4MCwiZXhwIjoxODEwNDU3NTgwfQ.jUUSsiM0woYDaLCf-SHhRwgNbOMoRPHDOMCNIrUssso',
     color: 'from-green-500/20 to-transparent',
     features: ['Ukoo Flani', 'Walanguzi', 'Wakadinali Drill', 'Shrap']
   },
