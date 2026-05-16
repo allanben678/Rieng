@@ -8,10 +8,10 @@ import Image from 'next/image'
 const dailyShows = [
   {
     title: 'Kenyan Old School',
-    host: 'RIENG Radio',
+    host: 'Muthoni Kenya',
     schedule: 'Weekdays | 5:00 AM - 10:00 AM',
     description: 'Journey through the greatest hits from 2000s to 2004/5 Kenyan music. Featuring e Sir, Mr. Lenny, Kleptomaniax, and Dux Vultures.',
-    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/KenyanOldSchool.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvS2VueWFuT2xkU2Nob29sLmpwZyIsImlhdCI6MTc3NzUwODgwMSwiZXhwIjoxODA5MDQ0ODAxfQ.5FR3q4quQCmHSW1WyQ-x0YjE0M04o2sQt2zs4u3_Fa0',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/KenyanOldSchool.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL0tlbnlhbk9sZFNjaG9vbC5qcGciLCJpYXQiOjE3Nzg5MjkyNzksImV4cCI6MTgxMDQ2NTI3OX0.v6fsoH7FpaX9-sDUtk1Kwk_5hiRTzvK_c9HIBHHU-LI',
     color: 'from-orange-500/20 to-transparent',
     features: ['e Sir', 'Mr. Lenny', 'Kleptomaniax', 'Dux Vultures']
   },
@@ -38,7 +38,7 @@ const dailyShows = [
     host: 'Joy Ohon',
     schedule: 'Weekdays | 7:00 PM - 11:00 PM',
     description: 'Featuring Ukoo Flani, Walanguzi, Katapila, Moroko Kalahari, Virusi Mbaya, Shrap, and Wakadinali Drill.',
-    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Underground.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1VuZGVyZ3JvdW5kLmpwZyIsImlhdCI6MTc3ODkyMTU4MCwiZXhwIjoxODEwNDU3NTgwfQ.jUUSsiM0woYDaLCf-SHhRwgNbOMoRPHDOMCNIrUssso',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Underground.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1VuZGVyZ3JvdW5kLmpwZyIsImlhdCI6MTc3ODkyOTUxNiwiZXhwIjoxODEwNDY1NTE2fQ.pKGmaixaUTCozsgsdKO5vn2DMu8HpNniojn6Zc8bRR8',
     color: 'from-green-500/20 to-transparent',
     features: ['Ukoo Flani', 'Walanguzi', 'Wakadinali Drill', 'Shrap']
   },
