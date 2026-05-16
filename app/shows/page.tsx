@@ -20,7 +20,7 @@ const dailyShows = [
     host: 'Kartelo',
     schedule: 'Weekdays | 10:00 AM - 3:00 PM',
     description: 'The hardest beats and hottest flows from the Gengetone and Arbantone scenes. Pure energy from Kenya&apos;s underground.',
-    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Gengetone.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL0dlbmdldG9uZS5qcGciLCJpYXQiOjE3Nzg4NjQ1NDksImV4cCI6MTgxMDQwMDU0OX0.oNH6E5Rn6OXIvquWSBtfFFVUB6aT9U0F_5Shbu0P7dI',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Gengetone.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL0dlbmdldG9uZS5qcGciLCJpYXQiOjE3Nzg5MjIyNjgsImV4cCI6MTgxMDQ1ODI2OH0.ZAeYHVu40CCAlJsg5L1RCQetbEilaVlOfWCmYA3xDGk',
     color: 'from-red-500/20 to-transparent',
     features: ['Live Gengetone', 'New Drops', 'Beat Breakdowns']
   },
