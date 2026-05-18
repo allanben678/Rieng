@@ -15,18 +15,26 @@ export default function VideoCard({
   badge: string
 }) {
   const [isOpen, setIsOpen] = useState(false)
+  const [animateIn, setAnimateIn] = useState(false)
   const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
 
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'
+      setTimeout(() => setAnimateIn(true), 10)
     } else {
       document.body.style.overflow = 'unset'
+      setAnimateIn(false)
     }
     return () => {
       document.body.style.overflow = 'unset'
     }
   }, [isOpen])
+
+  const handleClose = () => {
+    setAnimateIn(false)
+    setTimeout(() => setIsOpen(false), 400)
+  }
 
   return (
     <>
@@ -65,38 +73,40 @@ export default function VideoCard({
         </div>
       </div>
 
-      {/* Video Modal */}
+      {/* Cinematic Video Modal */}
       {isOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center px-4 py-10 md:p-10">
+        <div
+          className={`fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 lg:p-8 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] ${animateIn ? 'opacity-100' : 'opacity-0'}`}
+        >
           {/* Backdrop */}
-          <div 
-            className="absolute inset-0 bg-black/90 backdrop-blur-xl"
-            onClick={() => setIsOpen(false)}
-          ></div>
-          
-          {/* Modal Content */}
-          <div className="relative z-10 w-full max-w-5xl bg-[#050505] border border-white/10 shadow-[0_0_50px_rgba(239,68,68,0.2)] rounded-2xl overflow-hidden flex flex-col">
-            <button 
-              onClick={() => setIsOpen(false)}
-              className="absolute -top-12 right-0 md:top-4 md:right-4 text-white/70 hover:text-white bg-black/50 p-2 rounded-full backdrop-blur-md transition-colors z-50"
+          <div
+            className="absolute inset-0 bg-[#050505]/95 backdrop-blur-xl"
+            onClick={handleClose}
+          />
+
+          {/* Modal */}
+          <div
+            className={`relative w-full max-w-4xl aspect-video bg-black rounded-3xl overflow-hidden shadow-[0_0_100px_rgba(239,68,68,0.25)] border border-white/10 z-10 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] transform ${animateIn ? 'scale-100 translate-y-0' : 'scale-90 translate-y-16'}`}
+          >
+            <button
+              onClick={handleClose}
+              className="absolute top-4 right-4 md:top-6 md:right-6 w-12 h-12 bg-black/50 hover:bg-red-600 backdrop-blur-md rounded-full text-white flex items-center justify-center z-20 transition-all border border-white/10"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
             </button>
-            <div className="relative aspect-video w-full bg-black">
-              <iframe
-                src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
-                className="absolute inset-0 w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-            <div className="p-6 bg-[#050505] border-t border-white/5">
-               <h3 className="text-xl md:text-2xl font-black text-white uppercase tracking-tight line-clamp-1">{title}</h3>
-               <p className="text-red-500 font-bold text-sm tracking-widest uppercase mt-2">{views} Views • Rieng TV</p>
-            </div>
+            <iframe
+              src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`}
+              title={title}
+              className="w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
           </div>
         </div>
       )}
     </>
   )
 }
+

@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
@@ -66,20 +67,21 @@ const dailyShows = [
     image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/Gengetone.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvR2VuZ2V0b25lLmpwZyIsImlhdCI6MTc3NzUwODgzNSwiZXhwIjoxODA5MDQ0ODM1fQ.edECFW-1vDOXHHpQ7emyRfNPyDjDnbOAD5sdKAHuUcI',
   },
   {
-    title: 'Reggae / Dancehall',
+    title: 'Underground Kenyan HipHop',
     host: 'RIENG Radio',
-    schedule: 'Weekdays | 11:00 PM - 3:00 AM',
-    description: 'Unwind with smooth reggae vibes and infectious dancehall rhythms. Island sounds dominate the airwaves.',
-    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Reggae.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1JlZ2dhZS5qcGciLCJpYXQiOjE3Nzc2MTg3MDMsImV4cCI6MTgwOTE1NDcwM30.rcWa7oHOxsnZG_cO-6TTAwpPYr147JuCiF8Dk6Ie13s',
+    schedule: 'Weekdays | 7:00 PM - 11:00 PM',
+    description: 'Raw Kenyan HipHop straight from the underground. Pure beats and authentic lyricism from Kenya\'s finest rappers.',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Underground.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1VuZGVyZ3JvdW5kLmpwZyIsImlhdCI6MTc3NzYxODc3OSwiZXhwIjoxODA5MTU0Nzc5fQ.6lJzUQFJSgdjCajfBQFKmJXnzMgJURDJmUXkRV4Fd8E',
   },
 ]
 
 const trendingContent = [
   {
     category: 'Music',
-    title: 'Mejja ft. Fik Fameica - Siaka [Official Video]',
-    link: 'https://youtu.be/hcAV2lxaT2E?si=0pRJNVFJth1N0T-M',
-    image: '/Siaka.jpg',
+    title: 'Sean MMG ft. Khaligraph - Personality',
+    link: 'https://www.youtube.com/watch?v=Z_wW2ywe04w',
+    videoId: 'Z_wW2ywe04w',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/Sean_Ming.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvU2Vhbl9NaW5nLmpwZyIsImlhdCI6MTc3OTA4MDEwMCwiZXhwIjoxODEwNjE2MTAwfQ.43uPrestpCOyq7MjOppzoKL190MIO44Cs6FlzcQCf08',
   },
   {
     category: 'Entertainment',
@@ -172,6 +174,26 @@ function AnimatedShowsSection() {
 }
 
 export default function Home() {
+  const [activeVideoId, setActiveVideoId] = useState<string | null>(null);
+  const [activeVideoTitle, setActiveVideoTitle] = useState<string>('');
+  const [animateIn, setAnimateIn] = useState(false);
+
+  const handleOpenModal = (videoId: string, title: string) => {
+    setActiveVideoId(videoId);
+    setActiveVideoTitle(title);
+    setTimeout(() => setAnimateIn(true), 10);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const handleCloseModal = () => {
+    setAnimateIn(false);
+    setTimeout(() => {
+      setActiveVideoId(null);
+      setActiveVideoTitle('');
+      document.body.style.overflow = 'unset';
+    }, 400);
+  };
+
   const { ref: trendingRef, inView: trendingInView } = useInView({ threshold: 0.1, triggerOnce: true })
   const { ref: videoRef, inView: videoInView } = useInView({ threshold: 0.1, triggerOnce: true })
   const { ref: reviewRef, inView: reviewInView } = useInView({ threshold: 0.1, triggerOnce: true })
@@ -215,7 +237,7 @@ export default function Home() {
           >
             {trendingContent.map((item, index) => (
               <motion.div key={index} variants={itemVariants}>
-                <MediaCard {...item} />
+                <MediaCard {...item} onVideoClick={handleOpenModal} />
               </motion.div>
             ))}
           </motion.div>
@@ -303,6 +325,37 @@ export default function Home() {
       </section>
 
       <Footer />
+
+      {/* Cinematic Video Modal */}
+      {activeVideoId && (
+        <div
+          className={`fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 lg:p-8 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] ${animateIn ? 'opacity-100' : 'opacity-0'}`}
+        >
+          <div
+            className="absolute inset-0 bg-[#050505]/95 backdrop-blur-xl"
+            onClick={handleCloseModal}
+          />
+          <div
+            className={`relative w-full max-w-4xl aspect-video bg-black rounded-3xl overflow-hidden shadow-[0_0_100px_rgba(255,107,53,0.3)] border border-white/10 z-10 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] transform ${animateIn ? 'scale-100 translate-y-0' : 'scale-90 translate-y-16'}`}
+          >
+            <button
+              onClick={handleCloseModal}
+              className="absolute top-4 right-4 md:top-6 md:right-6 w-12 h-12 bg-black/50 hover:bg-primary backdrop-blur-md rounded-full text-white flex items-center justify-center z-20 transition-all border border-white/10"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <iframe
+              src={`https://www.youtube.com/embed/${activeVideoId}?autoplay=1&rel=0&modestbranding=1`}
+              title={activeVideoTitle}
+              className="w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      )}
     </main>
   )
 }

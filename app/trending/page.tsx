@@ -9,6 +9,16 @@ const trendingItems = [
   {
     id: '01',
     category: 'Music',
+    title: 'Sean MMG ft. Khaligraph - Personality',
+    link: 'https://www.youtube.com/watch?v=Z_wW2ywe04w',
+    videoId: 'Z_wW2ywe04w',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/Sean_Ming.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvU2Vhbl9NaW5nLmpwZyIsImlhdCI6MTc3OTA4MDEwMCwiZXhwIjoxODEwNjE2MTAwfQ.43uPrestpCOyq7MjOppzoKL190MIO44Cs6FlzcQCf08',
+    excerpt: 'Sean MMG and Khaligraph Jones deliver a hard-hitting street anthem packed with raw energy and sharp bars.',
+    stats: 'Trending Now'
+  },
+  {
+    id: '02',
+    category: 'Music',
     title: 'Mejja ft. Fik Fameica - Siaka',
     link: 'https://youtu.be/hcAV2lxaT2E?si=0pRJNVFJth1N0T-M',
     videoId: 'hcAV2lxaT2E',
@@ -17,7 +27,7 @@ const trendingItems = [
     stats: '1.2M Views'
   },
   {
-    id: '02',
+    id: '03',
     category: 'Entertainment',
     title: 'Singer Naomi Kihuha’s $90 [Sh13K] grocery bill: What it buys in Kenya vs. U.S.',
     link: 'https://www.pulse.co.ke/entertainment',
@@ -26,7 +36,7 @@ const trendingItems = [
     stats: 'Read Time: 5 Min'
   },
   {
-    id: '03',
+    id: '04',
     category: 'Creators',
     title: 'The cost of the gold rush: How TikTok is reshaping Kenya',
     link: 'https://www.pulse.co.ke/story/the-cost-of-the-gold-rush-how-tiktok-is-reshaping-kenya-2026042412282549816',
@@ -35,7 +45,7 @@ const trendingItems = [
     stats: 'Read Time: 6 Min'
   },
   {
-    id: '04',
+    id: '05',
     category: 'Culture',
     title: 'Behind stage names, real identities powering Kenya\'s music scene',
     link: 'https://www.the-star.co.ke/sasa/entertainment/2026-04-20-behind-stage-names-real-identities-powering-kenyas-music-scene',
@@ -47,6 +57,8 @@ const trendingItems = [
 
 export default function TrendingPage() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [activeVideoId, setActiveVideoId] = useState<string | null>(null);
+  const [activeVideoTitle, setActiveVideoTitle] = useState<string>('');
   const [animateIn, setAnimateIn] = useState(false);
   const topTrend = trendingItems[0];
   const restTrends = trendingItems.slice(1);
@@ -62,10 +74,20 @@ export default function TrendingPage() {
     return () => { document.body.style.overflow = 'unset'; };
   }, [isVideoModalOpen]);
 
+  const handleOpenModal = (videoId: string, title: string) => {
+    setActiveVideoId(videoId);
+    setActiveVideoTitle(title);
+    setIsVideoModalOpen(true);
+  };
+
   const handleCloseModal = () => {
     setAnimateIn(false);
-    setTimeout(() => setIsVideoModalOpen(false), 400);
-  }
+    setTimeout(() => {
+      setIsVideoModalOpen(false);
+      setActiveVideoId(null);
+      setActiveVideoTitle('');
+    }, 400);
+  };
 
   return (
     <main className="min-h-screen bg-[#050505] selection:bg-primary selection:text-white">
@@ -92,7 +114,7 @@ export default function TrendingPage() {
               
               <div className="flex flex-wrap items-center gap-6">
                 <button 
-                  onClick={() => topTrend.videoId ? setIsVideoModalOpen(true) : window.open(topTrend.link, '_blank')}
+                  onClick={() => topTrend.videoId ? handleOpenModal(topTrend.videoId, topTrend.title) : window.open(topTrend.link, '_blank')}
                   className="bg-primary hover:bg-white text-white hover:text-black transition-all shadow-[0_0_20px_rgba(255,107,53,0.3)] font-black uppercase text-sm tracking-widest px-8 py-4 rounded-full flex items-center gap-2 w-max"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -148,6 +170,47 @@ export default function TrendingPage() {
            
            <div className="flex flex-col">
              {restTrends.map((trend) => (
+               trend.videoId ? (
+               <button
+                 key={trend.id}
+                 onClick={() => handleOpenModal(trend.videoId!, trend.title)}
+                 className="group flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10 py-10 border-b border-white/5 hover:border-primary/30 transition-colors relative text-left w-full"
+               >
+                 <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                 
+                 {/* Large Number */}
+                 <div className="text-5xl md:text-7xl font-black text-white/5 group-hover:text-primary/30 transition-colors pointer-events-none w-16 md:w-24 flex-shrink-0 relative z-10">
+                   {trend.id}
+                 </div>
+
+                 {/* Image */}
+                 <div className="relative w-full md:w-56 h-56 md:h-36 rounded-2xl overflow-hidden shadow-lg flex-shrink-0 z-10 border border-white/5">
+                   <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors z-10 mix-blend-overlay"></div>
+                   <Image 
+                     src={trend.image}
+                     alt={trend.title}
+                     fill
+                     className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                   />
+                 </div>
+
+                 {/* Content */}
+                 <div className="flex-1 md:pr-4 z-10">
+                    <p className="text-primary text-[10px] font-black uppercase tracking-[0.2em] mb-3 border border-primary/20 bg-primary/5 px-2 py-0.5 rounded-sm inline-block shadow-inner">{trend.category}</p>
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-200 group-hover:text-white transition-colors line-clamp-2 mb-3">
+                      {trend.title}
+                    </h3>
+                    <p className="text-sm md:text-base text-gray-500 font-medium line-clamp-2 group-hover:text-gray-400 transition-colors">
+                       {trend.excerpt}
+                    </p>
+                 </div>
+
+                 {/* Play / Arrow */}
+                 <div className="hidden md:flex items-center justify-center w-14 h-14 rounded-full border border-white/10 text-white/50 group-hover:bg-primary group-hover:text-white group-hover:border-primary group-hover:shadow-[0_0_25px_rgba(255,107,53,0.4)] transition-all duration-300 transform group-hover:scale-110 flex-shrink-0 z-10">
+                   <svg className="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                 </div>
+               </button>
+               ) : (
                <a 
                  key={trend.id} 
                  href={trend.link}
@@ -189,13 +252,14 @@ export default function TrendingPage() {
                    <svg className="w-5 h-5 ml-1" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                  </div>
                </a>
-             ))}
+               )
+              ))}
            </div>
         </div>
       </section>
 
       {/* Video Modal Overlay */}
-      {isVideoModalOpen && topTrend.videoId && (
+      {isVideoModalOpen && activeVideoId && (
         <div className={`fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 lg:p-8 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] ${animateIn ? 'opacity-100' : 'opacity-0'}`}>
           <div 
             className="absolute inset-0 bg-[#050505]/95 backdrop-blur-xl" 
@@ -209,8 +273,8 @@ export default function TrendingPage() {
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
              </button>
              <iframe 
-               src={`https://www.youtube.com/embed/${topTrend.videoId}?autoplay=1&rel=0&modestbranding=1`} 
-               title={topTrend.title}
+               src={`https://www.youtube.com/embed/${activeVideoId}?autoplay=1&rel=0&modestbranding=1`} 
+               title={activeVideoTitle}
                className="w-full h-full"
                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                allowFullScreen
