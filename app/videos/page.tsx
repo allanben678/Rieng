@@ -467,7 +467,7 @@ export default function VideosPage() {
           <div className="mb-14 flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/5 pb-10">
             <div>
               <p className="text-xs font-black tracking-[0.4em] text-red-500 uppercase mb-3">Browse Content</p>
-              <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter">Pick Your <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-400 pr-2">Channel</span></h2>
+              <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter">Pick Your <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-400 pr-2">Category</span></h2>
             </div>
             <p className="text-gray-500 font-medium max-w-sm text-right hidden md:block">
               {activeCategory ? `Showing: ${activeCategory}` : 'Tap a category to explore its content'}
