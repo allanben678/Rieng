@@ -8,46 +8,46 @@ import Image from 'next/image'
 const dailyShows = [
   {
     title: 'Kenyan Old School',
-    host: 'RIENG Radio',
+    host: 'Muthoni Kenya',
     schedule: 'Weekdays | 5:00 AM - 10:00 AM',
     description: 'Journey through the greatest hits from 2000s to 2004/5 Kenyan music. Featuring e Sir, Mr. Lenny, Kleptomaniax, and Dux Vultures.',
-    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/KenyanOldSchool.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvS2VueWFuT2xkU2Nob29sLmpwZyIsImlhdCI6MTc3NzUwODgwMSwiZXhwIjoxODA5MDQ0ODAxfQ.5FR3q4quQCmHSW1WyQ-x0YjE0M04o2sQt2zs4u3_Fa0',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/KenyanOldSchool.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL0tlbnlhbk9sZFNjaG9vbC5qcGciLCJpYXQiOjE3Nzg5MjkyNzksImV4cCI6MTgxMDQ2NTI3OX0.v6fsoH7FpaX9-sDUtk1Kwk_5hiRTzvK_c9HIBHHU-LI',
     color: 'from-orange-500/20 to-transparent',
     features: ['e Sir', 'Mr. Lenny', 'Kleptomaniax', 'Dux Vultures']
   },
   {
     title: 'Gengetone / Arbantone',
-    host: 'RIENG Radio',
+    host: 'Kartelo',
     schedule: 'Weekdays | 10:00 AM - 3:00 PM',
     description: 'The hardest beats and hottest flows from the Gengetone and Arbantone scenes. Pure energy from Kenya&apos;s underground.',
-    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/Gengetone.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvR2VuZ2V0b25lLmpwZyIsImlhdCI6MTc3NzUwODgzNSwiZXhwIjoxODA5MDQ0ODM1fQ.edECFW-1vDOXHHpQ7emyRfNPyDjDnbOAD5sdKAHuUcI',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Gengetone.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL0dlbmdldG9uZS5qcGciLCJpYXQiOjE3Nzg5MzAzNTcsImV4cCI6MTgxMDQ2NjM1N30.9iwE6_2PH9sD1_eERr_zwPCviqe9LY98KUVMkE7FXnI',
     color: 'from-red-500/20 to-transparent',
     features: ['Live Gengetone', 'New Drops', 'Beat Breakdowns']
   },
   {
     title: 'Reggae / Dancehall',
-    host: 'RIENG Radio',
-    schedule: 'Weekdays | 11:00 PM - 3:00 AM',
+    host: 'inkmatic',
+    schedule: 'Weekdays | 3:00 PM - 7:00 PM',
     description: 'Unwind with smooth reggae vibes and infectious dancehall rhythms. Island sounds dominate the airwaves.',
-    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Reggae.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1JlZ2dhZS5qcGciLCJpYXQiOjE3Nzc2MTg3MDMsImV4cCI6MTgwOTE1NDcwM30.rcWa7oHOxsnZG_cO-6TTAwpPYr147JuCiF8Dk6Ie13s',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/InkMatik.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvSW5rTWF0aWsuanBnIiwiaWF0IjoxNzc4ODYyNTY3LCJleHAiOjE4MTAzOTg1Njd9.PGiJ15a-fGAhA8e0v2HZwnkVIP2jBx4KSrWiPuwX-fA',
     color: 'from-purple-500/20 to-transparent',
     features: ['Reggae Classics', 'Dancehall Hits', 'Dubplates']
   },
   {
     title: 'Underground Kenyan HipHop',
-    host: 'RIENG Radio',
+    host: 'Joy Ohon',
     schedule: 'Weekdays | 7:00 PM - 11:00 PM',
     description: 'Featuring Ukoo Flani, Walanguzi, Katapila, Moroko Kalahari, Virusi Mbaya, Shrap, and Wakadinali Drill.',
-    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Underground.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1VuZGVyZ3JvdW5kLmpwZyIsImlhdCI6MTc3NzYxODc3OSwiZXhwIjoxODA5MTU0Nzc5fQ.6lJzUQFJSgdjCajfBQFKmJXnzMgJURDJmUXkRV4Fd8E',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/Underground.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1VuZGVyZ3JvdW5kLmpwZyIsImlhdCI6MTc3ODkyOTUxNiwiZXhwIjoxODEwNDY1NTE2fQ.pKGmaixaUTCozsgsdKO5vn2DMu8HpNniojn6Zc8bRR8',
     color: 'from-green-500/20 to-transparent',
     features: ['Ukoo Flani', 'Walanguzi', 'Wakadinali Drill', 'Shrap']
   },
   {
     title: 'Kenyan RnB',
     host: 'RIENG Radio',
-    schedule: 'Weekdays | 3:00 PM - 7:00 PM',
+    schedule: 'Weekdays | 11:00 PM - 3:00 AM',
     description: 'Smooth Kenyan RnB featuring Bensoul, Nviiri, Otile Brown, Kodong Clan, Sauti Sol, and more.',
-    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/UpdatedShows/RnB.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvVXBkYXRlZFNob3dzL1JuQi5qcGciLCJpYXQiOjE3Nzc2MTg3NTIsImV4cCI6MTgwOTE1NDc1Mn0.bECtwTIvCNZwGLHi2HHKkopAqJtoHXeTQ8MdtUijntE',
+    image: 'https://dkmdvhzdixefykoojhgt.supabase.co/storage/v1/object/sign/Mp3/shows/KenyanRnB.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81NTUxYTk2MC04YjVhLTRkNjEtOTJkMS1jMjVkNWNlY2IxMDMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNcDMvc2hvd3MvS2VueWFuUm5CLmpwZyIsImlhdCI6MTc3ODUxMzMxMywiZXhwIjoxODEwMDQ5MzEzfQ.DEbuexELYYSxv2iP7N5oRvsYjHIebYmuEK5hTn5h4Ls',
     color: 'from-blue-500/20 to-transparent',
     features: ['Bensoul', 'Nviiri', 'Otile Brown', 'Sauti Sol']
   },
@@ -128,9 +128,9 @@ export default function ShowsPage() {
           if (mounted) {
             if (show.title === 'Kenyan Old School' && currentHour >= 5 && currentHour < 10) isLive = true;
             if (show.title === 'Gengetone / Arbantone' && currentHour >= 10 && currentHour < 15) isLive = true;
-            if (show.title === 'Reggae / Dancehall' && (currentHour >= 23 || currentHour < 3)) isLive = true;
+            if (show.title === 'Reggae / Dancehall' && currentHour >= 15 && currentHour < 19) isLive = true;
             if (show.title === 'Underground Kenyan HipHop' && currentHour >= 19 && currentHour < 23) isLive = true;
-            if (show.title === 'Kenyan RnB' && currentHour >= 15 && currentHour < 19) isLive = true;
+            if (show.title === 'Kenyan RnB' && (currentHour >= 23 || currentHour < 3)) isLive = true;
             if (show.title === 'Gospel Kenya' && (currentDay === 0 || (currentHour >= 3 && currentHour < 5))) isLive = true;
             if (show.title === 'SPORTS SHOW' && currentDay === 6 && currentHour >= 8 && currentHour < 12) isLive = true;
             if (show.title === 'POLITICS SHOW' && currentDay === 6 && currentHour >= 15 && currentHour < 19) isLive = true;
