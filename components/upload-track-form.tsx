@@ -61,9 +61,13 @@ export function UploadTrackForm({ artistId }: { artistId?: string }) {
       const ext = formData.mp3File.name.split('.').pop()
       const filePath = `${artistId}/${Date.now()}.${ext}`
 
+      console.log('[v0] Upload starting - Bucket:', STORAGE_BUCKET, 'FilePath:', filePath, 'ArtistID:', artistId)
+
       const { error: uploadErr } = await supabase.storage
         .from(STORAGE_BUCKET)
         .upload(filePath, formData.mp3File, { contentType: 'audio/mpeg', upsert: false })
+
+      console.log('[v0] Upload response:', { uploadErr })
 
       if (uploadErr) throw new Error(`Storage error: ${uploadErr.message}`)
 
