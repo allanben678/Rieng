@@ -7,9 +7,9 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Upload, X, Check, AlertCircle, Loader2, Music } from 'lucide-react'
-import { supabase, ARTIST_ID, STORAGE_BUCKET } from '@/lib/supabase'
+import { supabase, STORAGE_BUCKET } from '@/lib/supabase'
 
-export function UploadTrackForm() {
+export function UploadTrackForm({ artistId }: { artistId?: string }) {
   const router = useRouter()
   const [formData, setFormData] = useState({
     trackName: '',
@@ -54,10 +54,12 @@ export function UploadTrackForm() {
     setError('')
 
     try {
+      if (!artistId) throw new Error('Artist ID not found. Please log in again.')
+
       // 1. Upload MP3 to Supabase Storage
       setUploadProgress('Uploading audio file…')
       const ext = formData.mp3File.name.split('.').pop()
-      const filePath = `${ARTIST_ID}/${Date.now()}.${ext}`
+      const filePath = `${artistId}/${Date.now()}.${ext}`
 
       const { error: uploadErr } = await supabase.storage
         .from(STORAGE_BUCKET)
@@ -71,7 +73,7 @@ export function UploadTrackForm() {
       // 3. Insert track into DB
       setUploadProgress('Saving track details…')
       const { error: insertErr } = await supabase.from('tracks').insert({
-        artist_id: ARTIST_ID,
+        artist_id: artistId,
         title: formData.trackName,
         description: formData.description,
         price_ksh: Number(formData.price),
